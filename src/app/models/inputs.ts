@@ -7,7 +7,6 @@ export class Inputs {
 
 /*
 export class Inputs {
-    _id: number;
     zone: number;
     Temperature: number;
     Humidity: number;
