@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class HowInputPage implements OnInit {
 
   constructor() { }
+
+  btnClicked() {
+    console.log('button clicked');
+    alert('You have now choosed level 1');
+  }
 
   ngOnInit() {
   }
