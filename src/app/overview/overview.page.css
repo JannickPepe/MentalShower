@@ -1,0 +1,41 @@
+.airquality {
+  padding: 6px;
+  background: rgba(4, 225, 255, 0.33);
+  border-radius: 25px;
+}
+
+.temp {
+  padding: 6px;
+  background: rgba(255, 200, 4, 0.33);
+  border-radius: 25px;
+}
+
+.humidity {
+  padding: 6px;
+  background: rgba(5, 255, 150, 0.33);
+  border-radius: 25px;
+}
+
+
+
+/* MORE TEXT, On screens that are 600px wide or less, the */
+@media screen and (max-width: 600px) {
+  .airquality ion-label p{
+      margin-top: 40px !important;
+      font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .temp ion-label p{
+      margin-top: 40px !important;
+      font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .humidity ion-label p{
+      margin-top: 40px !important;
+      font-weight: bold;
+  }
+}
