@@ -8,12 +8,14 @@ import { HowInputPageRoutingModule } from './how-input-routing.module';
 
 import { HowInputPage } from './how-input.page';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HowInputPageRoutingModule
+    HowInputPageRoutingModule,
   ],
   declarations: [HowInputPage]
 })

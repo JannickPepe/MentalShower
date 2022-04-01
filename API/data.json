@@ -35,7 +35,12 @@
       "age": "30",
       "id": 6,
       "address": "Roskilde"
+    },
+    {
+      "name": "Andrei",
+      "age": "69",
+      "id": 7,
+      "address": "GangsterVille"
     }
   ]
 }
-

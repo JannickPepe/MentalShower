@@ -1,9 +1,130 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>how-input</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-title>Room: D3.05</ion-title>
+          </ion-col>
+          <ion-col class="ion-text-end" size="6">
+            <ion-title>Timer: 59:50</ion-title>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-title>Zone: 13</ion-title>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
+  <ion-content class="ion-padding">
+    <ion-grid>
 
-</ion-content>
+      <ion-row>
+        <ion-col class="ion-text-center" size="12">
+          <h1>The mental shower room D3.05</h1>
+        </ion-col>
+        <ion-col class="ion-text-center" size="12">
+          <ion-item-divider></ion-item-divider>
+        </ion-col>
+      </ion-row>
+      <!-- Air Quality section-->
+      <ion-row>
+        <ion-col class="ion-text-center" size="12" size-sm>
+          <h2>How is the air quality?</h2>
+        </ion-col>
+      </ion-row>
+      <div class="airquality">
+        <ion-row>
+          <ion-col class="ion-text-center" size="2">
+            <p>Left icon</p>
+          </ion-col>
+        
+          <ion-col class="ion-text-center" size="8">
+              <ion-button>1</ion-button>
+              <ion-button>2</ion-button>
+              <ion-button>3</ion-button>
+              <ion-button>4</ion-button>
+              <ion-button>5</ion-button>
+              <ion-button>6</ion-button>
+          </ion-col>
+        
+          <ion-col class="ion-text-center" size="2">
+            <p>Right icon</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <!-- Temperature section-->
+      <ion-row>
+        <ion-col class="ion-text-center" size="12" size-sm>
+          <h2>How is the temperature?</h2>
+        </ion-col>
+      </ion-row>
+      <div class="temp">
+        <ion-row>
+          <ion-col class="ion-text-center" size="2">
+            <p>Left icon</p>
+          </ion-col>
+        
+          <ion-col class="ion-text-center" size="8">
+              <ion-button>1</ion-button>
+              <ion-button>2</ion-button>
+              <ion-button>3</ion-button>
+              <ion-button>4</ion-button>
+              <ion-button>5</ion-button>
+              <ion-button>6</ion-button>
+          </ion-col>
+        
+          <ion-col class="ion-text-center" size="2">
+            <p>Right icon</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <!-- Humidity section-->
+      <ion-row>
+        <ion-col class="ion-text-center" size="12" size-sm>
+          <h2>How is the humidity?</h2>
+        </ion-col>
+      </ion-row>
+      <div class="humidity">
+        <ion-row>
+          <ion-col class="ion-text-center" size="2">
+            <p>Left icon</p>
+          </ion-col>
+        
+          <ion-col class="ion-text-center" size="8">
+              <ion-button>1</ion-button>
+              <ion-button>2</ion-button>
+              <ion-button>3</ion-button>
+              <ion-button>4</ion-button>
+              <ion-button>5</ion-button>
+              <ion-button>6</ion-button>
+          </ion-col>
+        
+          <ion-col class="ion-text-center" size="2">
+            <p>Right icon</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <!-- Accept button section-->
+      <ion-row>
+        <ion-col size="12">
+          <ng-container>
+            <ion-list style="text-align:center">
+              <ion-button href="condition-input" color="success">Accept</ion-button>
+            </ion-list>
+            </ng-container>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
