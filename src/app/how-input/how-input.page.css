@@ -18,11 +18,57 @@
     border-radius: 30px;    
 }
 
-.buttons{
+.airquality ion-icon{
+    margin-top:2%;
 }
 
-.left_icon p{
+.humidity ion-icon{
+    margin-top:2%;
 }
 
-.right_icon p{
+.temp ion-icon{
+    margin-top:2%;
+}
+
+
+
+
+
+/* AIR QUALITY On screens that are 600px wide or less, the */
+@media screen and (max-width: 600px) {
+    .airquality ion-icon{
+        margin-top: 10px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .airquality ion-button{
+        width: 13% !important;
+    }
+}
+
+
+/* TEMP On screens that are 600px wide or less, the */
+@media screen and (max-width: 600px) {
+    .temp ion-icon{
+        margin-top: 10px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .temp ion-button{
+        width: 13% !important;
+    }
+}
+
+
+
+/* HUMIDITY On screens that are 600px wide or less, the */
+@media screen and (max-width: 600px) {
+    .humidity ion-icon{
+        margin-top: 10px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .humidity ion-button{
+        width: 13% !important;
+    }
 }

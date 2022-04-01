@@ -39,11 +39,11 @@
       <div class="airquality">
         <ion-row>
           <ion-col class="ion-text-center" size="2">
-            <p>Left icon</p>
+            <ion-icon size="large" name="sad-outline"></ion-icon>
           </ion-col>
         
-          <ion-col class="ion-text-center" size="8">
-              <ion-button>1</ion-button>
+          <ion-col class="ion-text-center" size="8" >
+              <ion-button (click)="btnClicked()">1</ion-button>
               <ion-button>2</ion-button>
               <ion-button>3</ion-button>
               <ion-button>4</ion-button>
@@ -52,7 +52,7 @@
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
-            <p>Right icon</p>
+            <ion-icon size="large" name="happy-outline"></ion-icon>
           </ion-col>
         </ion-row>
       </div>
@@ -65,7 +65,7 @@
       <div class="temp">
         <ion-row>
           <ion-col class="ion-text-center" size="2">
-            <p>Left icon</p>
+            <ion-icon size="large" name="snow-outline"></ion-icon>
           </ion-col>
         
           <ion-col class="ion-text-center" size="8">
@@ -78,7 +78,7 @@
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
-            <p>Right icon</p>
+            <ion-icon size="large" name="sunny-outline"></ion-icon>
           </ion-col>
         </ion-row>
       </div>
@@ -91,7 +91,7 @@
       <div class="humidity">
         <ion-row>
           <ion-col class="ion-text-center" size="2">
-            <p>Left icon</p>
+            <ion-icon size="large" name="thermometer-outline"></ion-icon>
           </ion-col>
         
           <ion-col class="ion-text-center" size="8">
@@ -104,7 +104,7 @@
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
-            <p>Right icon</p>
+            <ion-icon size="large" name="flame-outline"></ion-icon>
           </ion-col>
         </ion-row>
       </div>
@@ -118,13 +118,21 @@
             </ng-container>
         </ion-col>
       </ion-row>
-
     </ion-grid>
   </ion-content>
 
-  <ion-footer>
-    <ion-toolbar>
-      <ion-title>Footer</ion-title>
-    </ion-toolbar>
-  </ion-footer>
+  
+    <ion-footer>
+      <ion-grid>
+        <ion-row>
+          <ion-toolbar>
+            <ion-col size="12">
+              <h2 class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</h2>
+            </ion-col>
+          </ion-toolbar>
+        </ion-row>
+      </ion-grid>
+    </ion-footer>
+
+  
 </ion-app>
