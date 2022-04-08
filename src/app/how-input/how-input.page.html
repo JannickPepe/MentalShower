@@ -43,7 +43,7 @@
           </ion-col>
         
           <ion-col class="ion-text-center" size="8" >
-              <ion-button (click)="btnClicked()">1</ion-button>
+              <ion-button (click)="btnClicked('1')">1</ion-button>
               <ion-button>2</ion-button>
               <ion-button>3</ion-button>
               <ion-button>4</ion-button>
@@ -53,6 +53,9 @@
         
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="happy-outline"></ion-icon>
+          </ion-col>
+          <ion-col class="ion-text-center" size="12"> <ion-text color="success">
+            {{levelbar}}</ion-text>  
           </ion-col>
         </ion-row>
       </div>
@@ -73,12 +76,15 @@
               <ion-button>2</ion-button>
               <ion-button>3</ion-button>
               <ion-button>4</ion-button>
-              <ion-button>5</ion-button>
+              <ion-button (click)="btnClicked2('5')">5</ion-button>
               <ion-button>6</ion-button>
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="sunny-outline"></ion-icon>
+          </ion-col>
+          <ion-col class="ion-text-center" size="12"> <ion-text color="success">
+            {{levelbar2}}</ion-text>  
           </ion-col>
         </ion-row>
       </div>
@@ -98,13 +104,16 @@
               <ion-button>1</ion-button>
               <ion-button>2</ion-button>
               <ion-button>3</ion-button>
-              <ion-button>4</ion-button>
+              <ion-button (click)="btnClicked3('4')">4</ion-button>
               <ion-button>5</ion-button>
               <ion-button>6</ion-button>
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="flame-outline"></ion-icon>
+          </ion-col>
+          <ion-col class="ion-text-center" size="12"> <ion-text color="success">
+            {{levelbar3}}</ion-text>  
           </ion-col>
         </ion-row>
       </div>

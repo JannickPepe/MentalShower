@@ -41,6 +41,12 @@
       "age": "69",
       "id": 7,
       "address": "GangsterVille"
+    },
+    {
+      "name": "Botond",
+      "age": "23",
+      "id": 8,
+      "address": "Silo"
     }
   ]
 }

@@ -11,6 +11,5 @@ export class Inputs {
     Temperature: number;
     Humidity: number;
     AirQuality: number;
-    date: number;
 }
 */

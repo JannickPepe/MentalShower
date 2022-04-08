@@ -7,15 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./how-input.page.css'],
 })
 export class HowInputPage implements OnInit {
+  public levelbar: string;
+  public levelbar2: string;
+  public levelbar3: string;
+  public colorvar;
 
   constructor() { }
 
-  btnClicked() {
-    console.log('button clicked');
-    alert('You have now choosed level 1');
-  }
-
   ngOnInit() {
   }
+
+  btnClicked(bar) {
+    this.levelbar = bar;
+  }
+  btnClicked2(bar) {
+    this.levelbar2 = bar;
+  }
+  btnClicked3(bar) {
+    this.levelbar3 = bar;
+  }
+
 
 }
