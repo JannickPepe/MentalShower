@@ -27,7 +27,6 @@ export class InputCreatePage implements OnInit {
     this.apiService.createItem(this.data).subscribe((response) => {
       this.router.navigate(['admin']);
     });
-
   }
 
 }
