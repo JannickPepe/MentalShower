@@ -25,7 +25,7 @@ export class InputCreatePage implements OnInit {
 
   submitForm() {
     this.apiService.createItem(this.data).subscribe((response) => {
-      this.router.navigate(['input-list']);
+      this.router.navigate(['admin']);
     });
 
   }

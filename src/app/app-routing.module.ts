@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./input-edit/input-edit.module').then( m => m.InputEditPageModule)
   },
   {
-    path: 'input-list',
+    path: 'admin',
     loadChildren: () => import('./input-list/input-list.module').then( m => m.InputListPageModule)
   },
   {

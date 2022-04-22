@@ -2,9 +2,9 @@
   "inputs": [
     {
       "Zone": "1",
-      "Temperature": "35",
-      "Humidity": "10",
-      "AirQuality": "5",
+      "Temperature": "5",
+      "Humidity": "6",
+      "AirQuality": "3",
       "Date": "08-04-2022",
       "id": "O35aZVg",
       "Gender": "F"
@@ -44,6 +44,15 @@
       "AirQuality": "3",
       "Date": "22-04-2022",
       "id": "jAJN9Kx"
+    },
+    {
+      "Zone": "4",
+      "Temperature": "4",
+      "Humidity": "4",
+      "AirQuality": "4",
+      "Gender": "F",
+      "Date": "22-04-2022",
+      "id": "4leEzoO"
     }
   ]
 }
