@@ -6,7 +6,7 @@ import { ApiService } from '../services/api.service';
 @Component({
   selector: 'app-input-list',
   templateUrl: './input-list.page.html',
-  styleUrls: ['./input-list.page.scss'],
+  styleUrls: ['./input-list.page.css'],
 })
 export class InputListPage implements OnInit {
 

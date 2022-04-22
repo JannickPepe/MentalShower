@@ -9,19 +9,29 @@
   <table class="table">
     <thead>
       <tr>
+       
         <th scope="col">Id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Address</th>
+        <th scope="col">Zone</th>
+        <th scope="col">Temperature</th>
+        <th scope="col">Humidity</th>
+        <th scope="col">AirQuality</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Date</th>
         <th scope="col">Actions</th>
+     
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of InputsData">
+       
         <td>{{ item.id }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.age }}</td>
-        <td>{{ item.address }}</td>
+        <td>{{ item.Zone }}</td>
+        <td>{{ item.Temperature }}</td>
+        <td>{{ item.Humidity }}</td>
+        <td>{{ item.AirQuality }}</td>
+        <td>{{ item.Gender }}</td>
+        <td>{{ item.Date }}</td>
+    
         <td style="display: flex">
           <ion-button color="warning" size="small" routerLink='/input-edit/{{item.id}}'>
             <ion-icon name="create"></ion-icon>

@@ -1,15 +1,11 @@
-export class Inputs {
-    id: number;
-    name: string;
-    age: string;
-    address: string;
-}
+/* eslint-disable @typescript-eslint/naming-convention */
 
-/*
 export class Inputs {
-    zone: number;
+    Zone: number;
     Temperature: number;
     Humidity: number;
     AirQuality: number;
+    Gender: string;
+    Date: number;
 }
-*/
+

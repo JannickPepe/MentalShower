@@ -17,6 +17,7 @@ export class HowInputPage implements OnInit {
   ngOnInit() {
   }
 
+
   btnClicked(bar) {
     this.levelbar = bar;
   }
