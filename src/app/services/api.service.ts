@@ -52,6 +52,9 @@ export class ApiService {
       );
   }
 
+  // Create 2 items into 1
+
+
   // Get single student data by ID
   getItem(id): Observable<Inputs> {
     return this.http

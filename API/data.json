@@ -53,6 +53,15 @@
       "Gender": "F",
       "Date": "22-04-2022",
       "id": "4leEzoO"
+    },
+    {
+      "Zone": "11",
+      "Temperature": "4",
+      "Humidity": "4",
+      "AirQuality": "4",
+      "Gender": "O",
+      "id": "F-CPHnV",
+      "Date": "23-04-2022"
     }
   ]
 }
