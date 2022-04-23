@@ -1,30 +1,39 @@
 <!-- student-list.page.html -->
 <ion-header>
   <ion-toolbar color="tertiary">
-    <ion-title>List All inputs</ion-title>
+    <ion-title>Admin Page</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <h1 style="text-align: left; margin-bottom: 2%; margin-top: 1%;">Section over Mental Shower inputs</h1>
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Address</th>
-        <th scope="col">Actions</th>
+        <th scope="col" style="width: 12%;">Id</th>
+        <th scope="col" style="width: 12%;">Zone</th>
+        <th scope="col" style="width: 12%;">Temperature</th>
+        <th scope="col" style="width: 12%;">Humidity</th>
+        <th scope="col" style="width: 12%;">AirQuality</th>
+        <th scope="col" style="width: 12%;">Gender</th>
+        <th scope="col" style="width: 12%;">Date</th>
+        <th scope="col" style="width: 12%;">Actions</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of InputsData">
-        <td>{{ item.id }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.age }}</td>
-        <td>{{ item.address }}</td>
+        <td style="text-align: center; background-color: #DADADA;">{{ item.id }}</td>
+        <td style="text-align: center;">{{ item.Zone }}</td>
+        <td style="text-align: center; background-color: #DADADA;">{{ item.Temperature }}</td>
+        <td style="text-align: center;">{{ item.Humidity }}</td>
+        <td style="text-align: center; background-color: #DADADA;">{{ item.AirQuality }}</td>
+        <td style="text-align: center;">{{ item.Gender }}</td>
+        <td style="text-align: center; background-color: #DADADA;">{{ item.Date }}</td>
+    
         <td style="display: flex">
           <ion-button color="warning" size="small" routerLink='/input-edit/{{item.id}}'>
             <ion-icon name="create"></ion-icon>
+            <p>Edit</p>
           </ion-button>
           <ion-button color="danger" size="small" (click)="delete(item)">
             <ion-icon name="trash"></ion-icon>
@@ -33,7 +42,7 @@
       </tr>
     </tbody>
   </table>
-  <ion-button [routerLink]="['/input-create']">
+  <ion-button style="margin-top: 1%;" [routerLink]="['/input-create']">
     Add Input
   </ion-button>
 </ion-content>

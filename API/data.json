@@ -1,46 +1,67 @@
 {
   "inputs": [
     {
-      "id": 1,
-      "name": "Enola Rowe",
-      "class": "tony@mcu.com",
-      "address": "131 Oswaldo Street"
+      "Zone": "1",
+      "Temperature": "5",
+      "Humidity": "6",
+      "AirQuality": "3",
+      "Date": "08-04-2022",
+      "id": "O35aZVg",
+      "Gender": "F"
     },
     {
-      "id": 2,
-      "name": "Timmothy Lueilwitz",
-      "age": "15",
-      "address": "37137 Abbigail Lock"
+      "Zone": "4",
+      "Temperature": "1",
+      "Humidity": "4",
+      "AirQuality": "6",
+      "Date": "1-1-1111",
+      "id": "T4pYhF0",
+      "Gender": "M"
     },
     {
-      "id": 3,
-      "name": "Madilyn Pacocha",
-      "age": "14",
-      "address": "094 Morris Plains"
+      "Zone": "8",
+      "Temperature": "6",
+      "Humidity": "5",
+      "AirQuality": "5",
+      "Date": "21-11-1991",
+      "id": "RwxYNDM",
+      "Gender": "O"
     },
     {
-      "id": 4,
-      "name": "Harley Cremin",
-      "age": "17",
-      "address": "14855 Cathy Square"
+      "Zone": "5",
+      "Temperature": "6",
+      "Humidity": "5",
+      "AirQuality": "4",
+      "Date": "21-04-2022",
+      "id": "1W-0NYM",
+      "Gender": "F"
     },
     {
-      "id": 5,
-      "name": "Juana Ziemann",
-      "age": "16",
-      "address": "612 Dayana Stream"
+      "Gender": "M",
+      "Zone": "3",
+      "Temperature": "3",
+      "Humidity": "3",
+      "AirQuality": "3",
+      "Date": "22-04-2022",
+      "id": "jAJN9Kx"
     },
     {
-      "name": "Jannick",
-      "age": "30",
-      "id": 6,
-      "address": "Roskilde"
+      "Zone": "4",
+      "Temperature": "4",
+      "Humidity": "4",
+      "AirQuality": "4",
+      "Gender": "F",
+      "Date": "22-04-2022",
+      "id": "4leEzoO"
     },
     {
-      "name": "Andrei",
-      "age": "69",
-      "id": 7,
-      "address": "GangsterVille"
+      "Zone": "11",
+      "Temperature": "4",
+      "Humidity": "4",
+      "AirQuality": "4",
+      "Gender": "O",
+      "id": "F-CPHnV",
+      "Date": "23-04-2022"
     }
   ]
 }

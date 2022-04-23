@@ -1,25 +1,91 @@
 <ion-grid>
   <ion-row>
-    <ion-col size="12">The Mental Shower room D3.05 </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size="12"> _______________ </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size="12">Please choose a zone </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size="12" size-sm>
-      <div>Jannick</div>
+    <ion-col class="ion-text-center" size="12">
+      <h1>The mental shower room D3.05</h1>
     </ion-col>
-    <ion-col size="12" size-sm>
-      <div>Paranshu</div>
+    <ion-col class="ion-text-center" size="12">
+      <ion-item-divider></ion-item-divider>
     </ion-col>
+  </ion-row>
+  <!-- Air Quality section-->
+  <ion-row>
+    <ion-col class="ion-text-center" size="12" size-sm>
+      <h2>Please choose a zone</h2>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="4" size-sm> </ion-col>
+    <ion-col size="4" size-sm>
+      Wall Side
+     </ion-col>
+    <ion-col size="4" size-sm>Door Side </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4" size-sm> Vent 1 (at board) </ion-col>
+    <ion-col size="4"size-sm>
+        <ion-button style="--background:grey" expand="block" (click)="btnClicked('9')">9</ion-button>
+     </ion-col>
+    <ion-col size="4" size-sm>
+      <ion-button style="--background:grey" expand="block" (click)="btnClicked('10')">10</ion-button>
+     </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4" size-sm> Vent 2</ion-col>
+    <ion-col size="4" size-sm ><ion-button style="--background:grey" expand="block" (click)="btnClicked('11')">11</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('12')">12</ion-button> </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4" size-sm> Vent 3</ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('13')">13</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('14')"> 14</ion-button> </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4" size-sm> Vent 4 (at windows)</ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('15')">15</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('16')"> 16</ion-button> </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-text-center" size="12"> <ion-text color="danger">You have now choosed zone {{zoneno}}</ion-text>  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-text-center" size="12">Pick a gender </ion-col>
+  </ion-row>
+
+  <div class="gender-btn-wrapper">
+
+    <div class="background-icon-wrapper" id="bgcolor" (click)="test()" tappable>
+      <div class="male-icon">
+        <svg width="50" height="44" viewBox="0 0 50 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32.1477 30.4865C32.0071 28.9462 31.9677 27.401 32.0295 25.8573L32.0273 25.9252C33.7375 24.495 34.8042 22.6438 35.0568 20.6672L35.0614 20.6287C35.8318 20.5773 37.0477 19.9723 37.4023 17.5743C37.5093 17.1613 37.4689 16.7323 37.2859 16.3371C37.1029 15.9419 36.7847 15.5966 36.3682 15.3413L36.3614 15.3377C37.6159 12.2943 40.2205 2.87833 31.5409 1.90667C30.6477 0.641667 28.3614 0 25.3886 0C13.4955 0.176 12.0614 7.2435 14.6614 15.3377C14.2416 15.5953 13.9213 15.944 13.7382 16.343C13.5551 16.742 13.5166 17.1748 13.6273 17.5908L13.625 17.5762C13.9886 19.9705 15.1955 20.5792 15.9659 20.6305C16.2362 22.6291 17.3367 24.4952 19.0886 25.9252C19.1462 27.4959 19.1022 29.068 18.9568 30.635L18.9682 30.4865C16.6091 35.5905 0.727273 34.1568 0 44H51.0409C50.3091 34.1568 34.5 35.5905 32.1455 30.4865H32.1477Z" fill="black"/>
+          </svg>
+      </div>
+   </div>
+
+
+    <div class="background-icon-wrapper" id="bgcolor2" (click)="test1()" tappable>
+
+      <div class="female-icon">
+        <svg width="43" height="47" viewBox="0 0 43 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M41.1046 30.0785L30.9256 25.3724L26.6213 23.3822C26.7292 23.316 26.8319 23.2411 26.9379 23.1711H32.5896C33.0099 23.1711 33.413 23.0093 33.7102 22.7213C34.0074 22.4332 34.1743 22.0426 34.1743 21.6352V17.5937H34.16C33.9871 11.9615 31.9689 7.0066 28.9379 3.89944C27.3396 2.15245 25.268 0.965529 22.9508 0.610839C22.8474 0.594459 22.7441 0.579339 22.6401 0.566109C22.5205 0.551619 22.4015 0.537129 22.2806 0.527679C22.0209 0.504204 21.7602 0.491802 21.4993 0.490509H21.498C21.2393 0.490509 20.9839 0.504999 20.7291 0.526419C20.6069 0.536499 20.486 0.550989 20.3651 0.565479C20.2637 0.578079 20.1629 0.591939 20.0628 0.608319C17.7644 0.956709 15.7072 2.12536 14.1134 3.84715C11.0532 6.95116 9.01284 11.9294 8.83864 17.5944H8.82499V21.6358C8.82499 22.0432 8.99195 22.4339 9.28914 22.7219C9.58633 23.0099 9.9894 23.1718 10.4097 23.1718H16.077C16.2317 23.2738 16.3858 23.3778 16.5457 23.471L12.4234 25.3314L1.91419 30.0753C1.00094 30.4899 0.401642 31.4878 0.401642 32.6022V43.7942C0.401642 45.2942 1.47999 46.5101 2.81184 46.5101H40.1894C41.5213 46.5101 42.5996 45.2942 42.5996 43.7942V32.601C42.599 31.4903 42.0088 30.5018 41.1046 30.0785Z" fill="black"/>
+          </svg>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Accept button section-->
+  <ion-row>
     <ion-col size="12">
-      <div>Boton</div>
-    </ion-col>
-    <ion-col size="12">
-      <div>Rukshan</div>
+      <ng-container>
+        <ion-list style="text-align:center">
+          <ion-button href="how-input" color="success">Accept</ion-button>
+        </ion-list>
+        </ng-container>
     </ion-col>
   </ion-row>
+
 </ion-grid>

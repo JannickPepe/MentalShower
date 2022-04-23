@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ConditionInputPageRoutingModule } from './condition-input-routing.module';
 
 import { ConditionInputPage } from './condition-input.page';
+import { ConditionButtonComponent } from './condition-button/condition-button.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ConditionInputPage } from './condition-input.page';
     IonicModule,
     ConditionInputPageRoutingModule
   ],
-  declarations: [ConditionInputPage]
+  declarations: [ConditionInputPage, ConditionButtonComponent]
 })
 export class ConditionInputPageModule {}

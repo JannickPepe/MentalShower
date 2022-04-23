@@ -36,7 +36,7 @@ export class InputEditPage implements OnInit {
   update() {
     //Update item by taking id and updated data object
     this.apiService.updateItem(this.id, this.data).subscribe(response => {
-      this.router.navigate(['input-list']);
+      this.router.navigate(['admin']);
     });
   }
 

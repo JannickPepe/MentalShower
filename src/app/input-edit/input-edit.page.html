@@ -7,22 +7,43 @@
 
 <ion-content class="ion-padding">
 
-  <ion-item>
-    <ion-label>Name</ion-label>
-    <ion-input [(ngModel)]="data.name" placeholder="Enter Name"></ion-input>
+
+<ion-item>
+    <ion-label>Zone</ion-label>
+    <ion-input [(ngModel)]="data.Zone" placeholder="Enter Zone"></ion-input>
   </ion-item>
+
   <ion-item>
-    <ion-label>Age</ion-label>
-    <ion-input [(ngModel)]="data.age" placeholder="Enter Age"></ion-input>
+    <ion-label>Temperature</ion-label>
+    <ion-input [(ngModel)]="data.Temperature" placeholder="Enter temperature"></ion-input>
   </ion-item>
+
   <ion-item>
-    <ion-label>Address</ion-label>
-    <ion-input [(ngModel)]="data.address" placeholder="Enter Address"></ion-input>
+    <ion-label>Humidity</ion-label>
+    <ion-input [(ngModel)]="data.Humidity" placeholder="Enter Humidity"></ion-input>
   </ion-item>
+
+
+  <ion-item>
+    <ion-label>Air quality</ion-label>
+    <ion-input [(ngModel)]="data.AirQuality" placeholder="Enter air quality"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Your Gender</ion-label>
+    <ion-input [(ngModel)]="data.Gender" placeholder="Enter your gender"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-input [(ngModel)]="data.Date" placeholder="Enter date"></ion-input>
+  </ion-item>
+
   <ion-button (click)="update()" color="success" size="small">
     Update
   </ion-button>
-  <ion-button [routerLink]="[ '/input-list']" color="danger" size="small">
+  <ion-button [routerLink]="[ '/admin']" color="danger" size="small">
     Cancel
   </ion-button>
+
 </ion-content>
