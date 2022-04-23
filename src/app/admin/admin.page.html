@@ -1,0 +1,274 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-button (click)="toggleBulkEdit()" expand="full">Bulk Edit</ion-button>
+  <ion-button (click)="bulkDelete()" expand="full" color="danger" *ngIf="bulkEdit">Bulk Delete</ion-button> -->
+
+
+  <ion-row class="header-row">
+    <!-- <ion-col size="2" *ngIf="bulkEdit">
+      Select
+    </ion-col> -->
+    <!-- <ion-col size="6" size-md="4" size-lg="2" tappable (click)="sortBy('email')">
+      Email
+      <ion-icon name="arrow-down" *ngIf="sortDirection === 1"></ion-icon>
+      <ion-icon name="arrow-up" *ngIf="sortDirection === 2"></ion-icon>
+
+    </ion-col> -->
+
+    <ion-col size="6" size-md="4" size-lg="2">
+      Zone
+    </ion-col>
+
+    <!-- <ion-col size="2" class="ion-hide-md-down">
+      Gender
+    </ion-col> -->
+
+    <ion-col size="2">
+      Gender
+    </ion-col>
+
+    <ion-col size="2" >
+     Humidity
+    </ion-col>
+
+    <ion-col size="2" >
+      Air Quality
+    </ion-col>
+
+    <ion-col size="2" >
+      Temperature
+    </ion-col>
+
+    <ion-col size="2" >
+      Action
+    </ion-col>
+
+    <!-- <ion-col size="2" *ngIf="!bulkEdit">
+      Action
+    </ion-col> -->
+
+  </ion-row>
+
+  <ion-row *ngFor="let row of inputClimateNumbers; let i = index;" class="data-row">
+    <!-- <ion-col size="2" *ngIf="bulkEdit">
+      
+    </ion-col> -->
+    <ion-col size="6" size-md="4" size-lg="2">
+      {{row.zoneNo}}
+    </ion-col>
+    <ion-col size="2" class="ion-hide-md-down">
+      {{row.gender}}
+    </ion-col>
+
+    <ion-col size="2" >
+      {{row.humidity}}
+    </ion-col>
+
+    <ion-col size="2" >
+      {{row.airQuality}}
+    </ion-col>
+
+    <ion-col size="2" >
+      {{row.temperature}}
+    </ion-col>
+
+    <ion-col size="2">
+      <ion-button size="small" (click)="removeRow(row)" color="light" fill="clear">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+
+      <ion-button size="small" (click)="editRow(row)" color="dark" fill="clear">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <!-- <ion-col size="2" *ngIf="!bulkEdit">
+      <ion-button size="small" (click)="removeRow(i)" color="light" fill="clear">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col> -->
+
+  </ion-row>
+
+<!-- 
+  <form [formGroup]="validationForm">
+      
+    <ion-item>
+      <ion-label position="folating">Zone No</ion-label>
+      <ion-input formControlName="zoneNo" type="number" 
+      [class.invalid]="!slideOneForm.controls.firstName.valid && (slideOneForm.controls.firstName.dirty || submitAttempt)">
+    </ion-input>
+    </ion-item>
+
+    <ion-item
+    *ngIf="!slideOneForm.controls.firstName.valid  && (slideOneForm.controls.firstName.dirty || submitAttempt)"
+  >
+    <p>Please enter a valid zone.</p>
+  </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Gender</ion-label>
+      <ion-input formControlName="gender" type="text" [class.invalid]="!slideOneForm.controls.lastName.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+
+    <ion-item
+    *ngIf="!slideOneForm.controls.lastName.valid  && (slideOneForm.controls.lastName.dirty || submitAttempt)"
+  >
+    <p>Please enter a valid gender.</p>
+  </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Humidity</ion-label>
+      <ion-input formControlName="humidity" type="number" [class.invalid]="!slideOneForm.controls.age.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+
+    <ion-item
+    *ngIf="!slideOneForm.controls.age.valid  && (slideOneForm.controls.age.dirty || submitAttempt)"
+  >
+    <p>Please enter a valid number.</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Air Quality</ion-label>
+    <ion-input formControlName="airQuality" type="number" [class.invalid]="!slideOneForm.controls.age.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
+  </ion-item>
+
+  <ion-item
+  *ngIf="!slideOneForm.controls.age.valid  && (slideOneForm.controls.age.dirty || submitAttempt)"
+>
+  <p>Please enter a valid age.</p>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Temperature</ion-label>
+  <ion-input formControlName="temperature" type="number" [class.invalid]="!slideOneForm.controls.age.valid && (slideOneForm.controls.age.dirty || submitAttempt)"></ion-input>
+</ion-item>
+
+<ion-item
+*ngIf="!slideOneForm.controls.age.valid  && (slideOneForm.controls.age.dirty || submitAttempt)"
+>
+<p>Please enter a valid age.</p>
+</ion-item>
+
+  </form> -->
+
+<form [formGroup]="validationForm">
+
+  <ion-item-divider>
+    <ion-label>Indoor Climate Input Information</ion-label>
+  </ion-item-divider>
+
+  <!-- zone number input element with validation -->
+  <ion-item>
+    <ion-label>ZoneNo</ion-label>
+    <ion-input formControlName="zoneNo" type="number">
+    </ion-input>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation
+              of validationMessages.zoneNo">
+      <div class="error-message" *ngIf="validationForm.get('zoneNo')
+           .hasError(validation.type) 
+           && (validationForm.get('zoneNo').dirty 
+           || validationForm.get('zoneNo').touched)">
+        <ion-icon name="flash"></ion-icon>
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- gender input element with validation -->
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-input formControlName="gender" type="text">
+    </ion-input>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation
+              of validationMessages.gender">
+      <div class="error-message" *ngIf="validationForm.get('gender')
+           .hasError(validation.type) 
+           && (validationForm.get('gender').dirty 
+           || validationForm.get('gender').touched)">
+        <ion-icon name="flash"></ion-icon>
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- humidity input element with validation -->
+  <ion-item>
+    <ion-label>Humidity</ion-label>
+    <ion-input formControlName="humidity" type="number">
+    </ion-input>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation
+              of validationMessages.humidity">
+      <div class="error-message" *ngIf="validationForm.get('humidity')
+           .hasError(validation.type) 
+           && (validationForm.get('humidity').dirty 
+           || validationForm.get('humidity').touched)">
+        <ion-icon name="flash"></ion-icon>
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- AirQuality input element with validation -->
+  <ion-item>
+    <ion-label>AirQuality</ion-label>
+    <ion-input formControlName="airQuality" type="number">
+    </ion-input>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation
+              of validationMessages.airQuality">
+      <div class="error-message" *ngIf="validationForm.get('airQuality')
+           .hasError(validation.type) 
+           && (validationForm.get('airQuality').dirty 
+           || validationForm.get('airQuality').touched)">
+        <ion-icon name="flash"></ion-icon>
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Temperature input element with validation -->
+  <ion-item>
+    <ion-label>Temperature</ion-label>
+    <ion-input formControlName="temperature" type="number">
+    </ion-input>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation
+              of validationMessages.temperature">
+      <div class="error-message" *ngIf="validationForm.get('temperature')
+           .hasError(validation.type) 
+           && (validationForm.get('temperature').dirty 
+           || validationForm.get('temperature').touched)">
+        <ion-icon name="flash"></ion-icon>
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+
+</form>
+
+</ion-content>
+
+<ion-footer class="ion-padding">
+  <ion-button expand="block" type="submit" [disabled]="!validationForm.valid" *ngIf="!editClicked" (click)="send(validationForm.value)">
+    Submit
+  </ion-button>
+
+  <ion-button expand="block" type="submit" [disabled]="!validationForm.valid" *ngIf="editClicked" (click)="edit(validationForm.value)">
+    Submit Edit
+  </ion-button>
+
+</ion-footer>
