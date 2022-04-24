@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HowInputPageRoutingModule } from './how-input-routing.module';
 
 import { HowInputPage } from './how-input.page';
+import { ComponentsModule } from '../components.module';
 
 
 
@@ -16,6 +17,7 @@ import { HowInputPage } from './how-input.page';
     FormsModule,
     IonicModule,
     HowInputPageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [HowInputPage]
 })

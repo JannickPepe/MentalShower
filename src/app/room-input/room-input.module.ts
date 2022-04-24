@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RoomInputPageRoutingModule } from './room-input-routing.module';
 
 import { RoomInputPage } from './room-input.page';
+import { ComponentsModule } from '../components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RoomInputPageRoutingModule
+    RoomInputPageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [RoomInputPage]
 })
