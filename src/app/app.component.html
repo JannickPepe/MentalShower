@@ -1,3 +1,33 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-title>Room: {{ roomName$ | async }}</ion-title>
+          </ion-col>
+          <ion-col class="ion-text-end" size="6">
+            <ion-title>Timer: {{ minutesLeft }}:{{ secondsLeft }}</ion-title>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-title>Zone: {{ zoneId$ | async }}</ion-title>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-col size="12">
+        <h2 class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</h2>
+      </ion-col>
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>
