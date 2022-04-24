@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { InputClimate } from '../../models/inputClimate.model';
+import { Storage } from '@ionic/storage';
 
 const baseUrl = 'http://localhost:8080/api/inputClimateNumber';
 
@@ -10,7 +11,75 @@ const baseUrl = 'http://localhost:8080/api/inputClimateNumber';
   providedIn: 'root',
 })
 export class AdminService {
-  constructor(private http: HttpClient) {}
+  public inputClimate: InputClimate;
+  private storages: Storage | null = null;
+
+  constructor(private http: HttpClient, private storage: Storage) {
+    this.init();
+  }
+
+  async init() {
+    // If using, define drivers here: await this.storage.defineDriver(/*...*/);
+    const storage = await this.storage.create();
+    this.storages = storage;
+  }
+
+  saveZoneToStorage(zone) {
+    this.storages.set('zone', zone);
+  }
+
+  saveGenderToStorage(gender) {
+    this.storages.set('gender', gender);
+  }
+
+  saveAirQualityToStorage(aq) {
+    this.storages.set('airQuality', aq);
+  }
+
+  saveTemperatureToStorage(temp) {
+    this.storages.set('temperature', temp);
+  }
+
+  saveHumidityToStorage(humidity) {
+    this.storages.set('humidity', humidity);
+  }
+
+  async postInput() {
+    this.inputClimate.zoneNo = await this.storages.get('zone');
+    this.inputClimate.gender = await this.storages.get('gender');
+    this.inputClimate.airQuality = await this.storages.get('airQuality');
+    this.inputClimate.temperature = await this.storages.get('temperature');
+    this.inputClimate.humidity = await this.storages.get('humidity');
+
+    console.log(this.inputClimate);
+    // this.storages.get('zone').then((val) => {
+    //   this.inputClimate.zoneNo = val;
+    //   console.log(this.inputClimate.zoneNo);
+    //   return val; // result
+    // });
+    // this.storages.get('gender').then((val) => {
+    //   this.inputClimate.gender = val;
+    //   console.log(this.inputClimate.gender);
+    //   return val; // result
+    // });
+    // this.storages.get('airQuality').then((val) => {
+    //   this.inputClimate.airQuality = val;
+    //   console.log(this.inputClimate.airQuality);
+    //   return val; // result
+    // });
+    // this.storages.get('temperature').then((val) => {
+    //   this.inputClimate.temperature = val;
+    //   console.log(this.inputClimate.temperature);
+    //   return val; // result
+    // });
+    // this.storages.get('humidity').then((val) => {
+    //   this.inputClimate.humidity = val;
+    //   console.log(this.inputClimate.humidity);
+    //   return val; // result
+    // });
+    this.create(this.inputClimate);
+    this.storages.clear();
+  }
 
   getAll(): Observable<InputClimate[]> {
     return this.http.get<InputClimate[]>(baseUrl);

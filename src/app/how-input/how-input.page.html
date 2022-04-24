@@ -43,12 +43,12 @@
           </ion-col>
         
           <ion-col class="ion-text-center" size="8" >
-              <ion-button (click)="btnClicked()">1</ion-button>
-              <ion-button>2</ion-button>
-              <ion-button>3</ion-button>
-              <ion-button>4</ion-button>
-              <ion-button>5</ion-button>
-              <ion-button>6</ion-button>
+              <ion-button (click)="btnClickedAQ(1)">1</ion-button>
+              <ion-button (click)="btnClickedAQ(2)">2</ion-button>
+              <ion-button (click)="btnClickedAQ(3)">3</ion-button>
+              <ion-button (click)="btnClickedAQ(4)">4</ion-button>
+              <ion-button (click)="btnClickedAQ(5)">5</ion-button>
+              <ion-button (click)="btnClickedAQ(6)">6</ion-button>
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
@@ -69,12 +69,12 @@
           </ion-col>
         
           <ion-col class="ion-text-center" size="8">
-              <ion-button>1</ion-button>
-              <ion-button>2</ion-button>
-              <ion-button>3</ion-button>
-              <ion-button>4</ion-button>
-              <ion-button>5</ion-button>
-              <ion-button>6</ion-button>
+            <ion-button (click)="btnClickedTemp(1)">1</ion-button>
+            <ion-button (click)="btnClickedTemp(2)">2</ion-button>
+            <ion-button (click)="btnClickedTemp(3)">3</ion-button>
+            <ion-button (click)="btnClickedTemp(4)">4</ion-button>
+            <ion-button (click)="btnClickedTemp(5)">5</ion-button>
+            <ion-button (click)="btnClickedTemp(6)">6</ion-button>
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
@@ -95,12 +95,12 @@
           </ion-col>
         
           <ion-col class="ion-text-center" size="8">
-              <ion-button>1</ion-button>
-              <ion-button>2</ion-button>
-              <ion-button>3</ion-button>
-              <ion-button>4</ion-button>
-              <ion-button>5</ion-button>
-              <ion-button>6</ion-button>
+            <ion-button (click)="btnClickedHumid(1)">1</ion-button>
+            <ion-button (click)="btnClickedHumid(2)">2</ion-button>
+            <ion-button (click)="btnClickedHumid(3)">3</ion-button>
+            <ion-button (click)="btnClickedHumid(4)">4</ion-button>
+            <ion-button (click)="btnClickedHumid(5)">5</ion-button>
+            <ion-button (click)="btnClickedHumid(6)">6</ion-button>
           </ion-col>
         
           <ion-col class="ion-text-center" size="2">
@@ -113,7 +113,7 @@
         <ion-col size="12">
           <ng-container>
             <ion-list style="text-align:center">
-              <ion-button href="condition-input" color="success">Accept</ion-button>
+              <ion-button (click)="postData()" href="condition-input" color="success" >Accept</ion-button>
             </ion-list>
             </ng-container>
         </ion-col>
