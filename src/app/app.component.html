@@ -4,7 +4,7 @@
       <ion-grid>
         <ion-row>
           <ion-col size="6">
-            <ion-title>Room: D3.05</ion-title>
+            <ion-title>Room: {{ roomName$ | async }}</ion-title>
           </ion-col>
           <ion-col class="ion-text-end" size="6">
             <ion-title>Timer: 59:50</ion-title>
@@ -12,7 +12,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <ion-title>Zone: 13</ion-title>
+            <ion-title>Zone: {{ zoneId$ | async }}</ion-title>
           </ion-col>
         </ion-row>
       </ion-grid>

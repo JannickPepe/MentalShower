@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
+import { roomReducer } from './state/room/room.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,8 @@ import { StoreModule } from '@ngrx/store';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ room: roomReducer }, {})
   ],
   providers: [
     StatusBar,

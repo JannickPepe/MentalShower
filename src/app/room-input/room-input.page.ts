@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { setRoom } from '../state/room/room.actions';
 
 @Component({
   selector: 'app-room-input',
@@ -9,12 +11,13 @@ export class RoomInputPage implements OnInit {
   public zoneno: string;
   public colorvar;
 
-  constructor() {}
+  constructor(private readonly store: Store) {}
 
   ngOnInit() {}
 
   btnClicked(zone) {
     this.zoneno = zone;
+    this.store.dispatch(setRoom({ roomName: 'D3.05', zoneId: zone }));
   }
   test() {
     this.colorvar = document.getElementById('bgcolor').style.backgroundColor =
