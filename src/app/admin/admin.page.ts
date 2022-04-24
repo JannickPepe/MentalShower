@@ -195,7 +195,6 @@ export class AdminPage implements OnInit {
         console.log(error);
       }
     );
-    alert('row edited');
   }
 
   // submit method

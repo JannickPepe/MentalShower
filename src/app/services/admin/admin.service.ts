@@ -11,7 +11,7 @@ const baseUrl = 'http://localhost:8080/api/inputClimateNumber';
   providedIn: 'root',
 })
 export class AdminService {
-  public inputClimate: InputClimate;
+  public inputClimate: InputClimate = {};
   private storages: Storage | null = null;
 
   constructor(private http: HttpClient, private storage: Storage) {
@@ -77,7 +77,17 @@ export class AdminService {
     //   console.log(this.inputClimate.humidity);
     //   return val; // result
     // });
-    this.create(this.inputClimate);
+
+    this.create(this.inputClimate).subscribe(
+      (data) => {
+        // this.inputClimateNumbers = data;
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
     this.storages.clear();
   }
 
