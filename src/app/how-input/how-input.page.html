@@ -21,7 +21,6 @@
 
   <ion-content class="ion-padding">
     <ion-grid>
-
       <ion-row>
         <ion-col class="ion-text-center" size="12">
           <h1>The mental shower room D3.05</h1>
@@ -50,7 +49,7 @@
               <ion-button (click)="btnClickedAQ(5)">5</ion-button>
               <ion-button (click)="btnClickedAQ(6)">6</ion-button>
           </ion-col>
-        
+
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="happy-outline"></ion-icon>
           </ion-col>
@@ -67,7 +66,7 @@
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="snow-outline"></ion-icon>
           </ion-col>
-        
+
           <ion-col class="ion-text-center" size="8">
             <ion-button (click)="btnClickedTemp(1)">1</ion-button>
             <ion-button (click)="btnClickedTemp(2)">2</ion-button>
@@ -76,7 +75,7 @@
             <ion-button (click)="btnClickedTemp(5)">5</ion-button>
             <ion-button (click)="btnClickedTemp(6)">6</ion-button>
           </ion-col>
-        
+
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="sunny-outline"></ion-icon>
           </ion-col>
@@ -93,7 +92,7 @@
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="thermometer-outline"></ion-icon>
           </ion-col>
-        
+
           <ion-col class="ion-text-center" size="8">
             <ion-button (click)="btnClickedHumid(1)">1</ion-button>
             <ion-button (click)="btnClickedHumid(2)">2</ion-button>
@@ -102,7 +101,7 @@
             <ion-button (click)="btnClickedHumid(5)">5</ion-button>
             <ion-button (click)="btnClickedHumid(6)">6</ion-button>
           </ion-col>
-        
+
           <ion-col class="ion-text-center" size="2">
             <ion-icon size="large" name="flame-outline"></ion-icon>
           </ion-col>
@@ -112,27 +111,28 @@
       <ion-row>
         <ion-col size="12">
           <ng-container>
-            <ion-list style="text-align:center">
-              <ion-button (click)="postData()" href="condition-input" color="success" >Accept</ion-button>
+            <ion-list style="text-align: center">
+              <ion-button (click)="postData()" [routerLink]="['/condition-input']" color="success"
+                >Accept</ion-button
+              >
             </ion-list>
-            </ng-container>
+          </ng-container>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-content>
 
-  
-    <ion-footer>
-      <ion-grid>
-        <ion-row>
-          <ion-toolbar>
-            <ion-col size="12">
-              <h2 class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</h2>
-            </ion-col>
-          </ion-toolbar>
-        </ion-row>
-      </ion-grid>
-    </ion-footer>
-
-  
+  <ion-footer>
+    <ion-grid>
+      <ion-row>
+        <ion-toolbar>
+          <ion-col size="12">
+            <h2 class="ion-text-center">
+              Copyright &#xA9; 2022 Mental Shower. All rights Reserved
+            </h2>
+          </ion-col>
+        </ion-toolbar>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
 </ion-app>

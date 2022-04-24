@@ -24,26 +24,50 @@
       <!-- Condition buttons section-->
       <ion-row>
         <ion-col class="ion-text-right" size="6">
-          <app-condition-button condition="fresh" [selectedCondition]="condition" (selectCondition)="selectCondition($event)"></app-condition-button>
+          <app-condition-button
+            condition="fresh"
+            [selectedCondition]="condition"
+            (selectCondition)="selectCondition($event)"
+          ></app-condition-button>
         </ion-col>
         <ion-col class="ion-text-left" size="6">
-          <app-condition-button condition="stuffy" [selectedCondition]="condition" (selectCondition)="selectCondition($event)"></app-condition-button>
+          <app-condition-button
+            condition="stuffy"
+            [selectedCondition]="condition"
+            (selectCondition)="selectCondition($event)"
+          ></app-condition-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="ion-text-right" size="6">
-          <app-condition-button condition="cold" [selectedCondition]="condition" (selectCondition)="selectCondition($event)"></app-condition-button>
+          <app-condition-button
+            condition="cold"
+            [selectedCondition]="condition"
+            (selectCondition)="selectCondition($event)"
+          ></app-condition-button>
         </ion-col>
         <ion-col class="ion-text-left" size="6">
-          <app-condition-button condition="warm" [selectedCondition]="condition" (selectCondition)="selectCondition($event)"></app-condition-button>
+          <app-condition-button
+            condition="warm"
+            [selectedCondition]="condition"
+            (selectCondition)="selectCondition($event)"
+          ></app-condition-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="ion-text-right" size="6">
-          <app-condition-button condition="dry" [selectedCondition]="condition" (selectCondition)="selectCondition($event)"></app-condition-button>
+          <app-condition-button
+            condition="dry"
+            [selectedCondition]="condition"
+            (selectCondition)="selectCondition($event)"
+          ></app-condition-button>
         </ion-col>
         <ion-col class="ion-text-left" size="6">
-          <app-condition-button condition="damp" [selectedCondition]="condition" (selectCondition)="selectCondition($event)"></app-condition-button>
+          <app-condition-button
+            condition="damp"
+            [selectedCondition]="condition"
+            (selectCondition)="selectCondition($event)"
+          ></app-condition-button>
         </ion-col>
       </ion-row>
 
@@ -51,8 +75,13 @@
       <ion-row>
         <ion-col size="12">
           <ng-container>
-            <ion-list style="text-align:center">
-              <ion-button href="overview" color="success" [disabled]="!condition">Accept</ion-button>
+            <ion-list style="text-align: center">
+              <ion-button
+                [routerLink]="['/overview']"
+                color="success"
+                [disabled]="!condition"
+                >Accept</ion-button
+              >
             </ion-list>
           </ng-container>
         </ion-col>

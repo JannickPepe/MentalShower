@@ -27,46 +27,100 @@
           <h2>Please choose a zone</h2>
         </ion-col>
       </ion-row>
-      
+
       <ion-row>
         <ion-col size="4" size-sm> </ion-col>
-        <ion-col size="4" size-sm>
-          Wall Side
-         </ion-col>
+        <ion-col size="4" size-sm> Wall Side </ion-col>
         <ion-col size="4" size-sm>Door Side </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="4" size-sm> Vent 1 (at board) </ion-col>
-        <ion-col size="4"size-sm>
-            <ion-button style="--background:grey" expand="block" (click)="btnClicked('9')">9</ion-button>
-         </ion-col>
         <ion-col size="4" size-sm>
-          <ion-button style="--background:grey" expand="block" (click)="btnClicked('10')">10</ion-button>
-         </ion-col>
+          <ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('9')"
+            >9</ion-button
+          >
+        </ion-col>
+        <ion-col size="4" size-sm>
+          <ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('10')"
+            >10</ion-button
+          >
+        </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="4" size-sm> Vent 2</ion-col>
-        <ion-col size="4" size-sm ><ion-button style="--background:grey" expand="block" (click)="btnClicked('11')">11</ion-button> </ion-col>
-        <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('12')">12</ion-button> </ion-col>
+        <ion-col size="4" size-sm
+          ><ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('11')"
+            >11</ion-button
+          >
+        </ion-col>
+        <ion-col size="4" size-sm
+          ><ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('12')"
+            >12</ion-button
+          >
+        </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="4" size-sm> Vent 3</ion-col>
-        <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('13')">13</ion-button> </ion-col>
-        <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('14')"> 14</ion-button> </ion-col>
+        <ion-col size="4" size-sm
+          ><ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('13')"
+            >13</ion-button
+          >
+        </ion-col>
+        <ion-col size="4" size-sm
+          ><ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('14')"
+          >
+            14</ion-button
+          >
+        </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="4" size-sm> Vent 4 (at windows)</ion-col>
-        <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('15')">15</ion-button> </ion-col>
-        <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('16')"> 16</ion-button> </ion-col>
+        <ion-col size="4" size-sm
+          ><ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('15')"
+            >15</ion-button
+          >
+        </ion-col>
+        <ion-col size="4" size-sm
+          ><ion-button
+            style="--background: grey"
+            expand="block"
+            (click)="btnClicked('16')"
+          >
+            16</ion-button
+          >
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col class="ion-text-center" size="12"> <ion-text color="danger">You have now choosed zone {{zoneno}}</ion-text>  </ion-col>
+        <ion-col class="ion-text-center" size="12">
+          <ion-text color="danger"
+            >You have now choosed zone {{zoneno}}</ion-text
+          >
+        </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="ion-text-center" size="12">Pick a gender </ion-col>
       </ion-row>
-      
-      <div class="gender-btn-wrapper">
 
         <div class="background-icon-wrapper" id="bgcolor" (click)="test('M')" tappable>
           <div class="male-icon">
@@ -84,24 +138,20 @@
               <path d="M41.1046 30.0785L30.9256 25.3724L26.6213 23.3822C26.7292 23.316 26.8319 23.2411 26.9379 23.1711H32.5896C33.0099 23.1711 33.413 23.0093 33.7102 22.7213C34.0074 22.4332 34.1743 22.0426 34.1743 21.6352V17.5937H34.16C33.9871 11.9615 31.9689 7.0066 28.9379 3.89944C27.3396 2.15245 25.268 0.965529 22.9508 0.610839C22.8474 0.594459 22.7441 0.579339 22.6401 0.566109C22.5205 0.551619 22.4015 0.537129 22.2806 0.527679C22.0209 0.504204 21.7602 0.491802 21.4993 0.490509H21.498C21.2393 0.490509 20.9839 0.504999 20.7291 0.526419C20.6069 0.536499 20.486 0.550989 20.3651 0.565479C20.2637 0.578079 20.1629 0.591939 20.0628 0.608319C17.7644 0.956709 15.7072 2.12536 14.1134 3.84715C11.0532 6.95116 9.01284 11.9294 8.83864 17.5944H8.82499V21.6358C8.82499 22.0432 8.99195 22.4339 9.28914 22.7219C9.58633 23.0099 9.9894 23.1718 10.4097 23.1718H16.077C16.2317 23.2738 16.3858 23.3778 16.5457 23.471L12.4234 25.3314L1.91419 30.0753C1.00094 30.4899 0.401642 31.4878 0.401642 32.6022V43.7942C0.401642 45.2942 1.47999 46.5101 2.81184 46.5101H40.1894C41.5213 46.5101 42.5996 45.2942 42.5996 43.7942V32.601C42.599 31.4903 42.0088 30.5018 41.1046 30.0785Z" fill="black"/>
               </svg>                  
           </div>
-    
         </div>
-       
-      </div>
-          
-        
 
       <!-- Accept button section-->
       <ion-row>
         <ion-col size="12">
           <ng-container>
-            <ion-list style="text-align:center">
-              <ion-button href="how-input" color="success">Accept</ion-button>
+            <ion-list style="text-align: center">
+              <ion-button [routerLink]="['/how-input']" color="success"
+                >Accept</ion-button
+              >
             </ion-list>
-            </ng-container>
+          </ng-container>
         </ion-col>
       </ion-row>
-
     </ion-grid>
   </ion-content>
 
@@ -110,7 +160,9 @@
       <ion-row>
         <ion-toolbar>
           <ion-col size="12">
-            <h2 class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</h2>
+            <h2 class="ion-text-center">
+              Copyright &#xA9; 2022 Mental Shower. All rights Reserved
+            </h2>
           </ion-col>
         </ion-toolbar>
       </ion-row>
