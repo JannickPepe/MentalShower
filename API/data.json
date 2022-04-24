@@ -62,6 +62,18 @@
       "Gender": "O",
       "id": "F-CPHnV",
       "Date": "23-04-2022"
+    },
+    {
+      "AirQuality": "2",
+      "Temperature": "3",
+      "Humidity": "4",
+      "id": "0VjSj5X"
+    },
+    {
+      "AirQuality": "2",
+      "Temperature": "2",
+      "Humidity": "2",
+      "id": "CVmGP6K"
     }
   ]
 }

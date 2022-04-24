@@ -6,6 +6,6 @@ export class Inputs {
     Humidity: number;
     AirQuality: number;
     Gender: string;
-    Date: number;
+    Date: any;
 }
 
