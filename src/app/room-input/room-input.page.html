@@ -24,26 +24,26 @@
   <ion-row>
     <ion-col size="4" size-sm> Vent 1 (at board) </ion-col>
     <ion-col size="4"size-sm>
-        <ion-button style="--background:grey" expand="block" (click)="btnClicked('9')">9</ion-button>
+        <ion-button style="--background:grey" expand="block" (click)="btnClicked(9)">9</ion-button>
      </ion-col>
     <ion-col size="4" size-sm>
-      <ion-button style="--background:grey" expand="block" (click)="btnClicked('10')">10</ion-button>
+      <ion-button style="--background:grey" expand="block" (click)="btnClicked(10)">10</ion-button>
      </ion-col>
   </ion-row>
   <ion-row>
     <ion-col size="4" size-sm> Vent 2</ion-col>
-    <ion-col size="4" size-sm ><ion-button style="--background:grey" expand="block" (click)="btnClicked('11')">11</ion-button> </ion-col>
-    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('12')">12</ion-button> </ion-col>
+    <ion-col size="4" size-sm ><ion-button style="--background:grey" expand="block" (click)="btnClicked(11)">11</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked(12)">12</ion-button> </ion-col>
   </ion-row>
   <ion-row>
     <ion-col size="4" size-sm> Vent 3</ion-col>
-    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('13')">13</ion-button> </ion-col>
-    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('14')"> 14</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked(13)">13</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked(14)"> 14</ion-button> </ion-col>
   </ion-row>
   <ion-row>
     <ion-col size="4" size-sm> Vent 4 (at windows)</ion-col>
-    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('15')">15</ion-button> </ion-col>
-    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked('16')"> 16</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked(15)">15</ion-button> </ion-col>
+    <ion-col size="4" size-sm><ion-button style="--background:grey" expand="block" (click)="btnClicked(16)"> 16</ion-button> </ion-col>
   </ion-row>
   <ion-row>
     <ion-col class="ion-text-center" size="12"> <ion-text color="danger">You have now choosed zone {{zoneno}}</ion-text>  </ion-col>
@@ -82,7 +82,7 @@
     <ion-col size="12">
       <ng-container>
         <ion-list style="text-align:center">
-          <ion-button href="how-input" color="success">Accept</ion-button>
+          <ion-button color="success" [disabled]="!zoneno" (click)="acceptClick()">Accept</ion-button>
         </ion-list>
         </ng-container>
     </ion-col>
