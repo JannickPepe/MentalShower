@@ -52,31 +52,6 @@ export class AdminService {
     this.inputClimate.humidity = await this.storages.get('humidity');
 
     console.log(this.inputClimate);
-    // this.storages.get('zone').then((val) => {
-    //   this.inputClimate.zoneNo = val;
-    //   console.log(this.inputClimate.zoneNo);
-    //   return val; // result
-    // });
-    // this.storages.get('gender').then((val) => {
-    //   this.inputClimate.gender = val;
-    //   console.log(this.inputClimate.gender);
-    //   return val; // result
-    // });
-    // this.storages.get('airQuality').then((val) => {
-    //   this.inputClimate.airQuality = val;
-    //   console.log(this.inputClimate.airQuality);
-    //   return val; // result
-    // });
-    // this.storages.get('temperature').then((val) => {
-    //   this.inputClimate.temperature = val;
-    //   console.log(this.inputClimate.temperature);
-    //   return val; // result
-    // });
-    // this.storages.get('humidity').then((val) => {
-    //   this.inputClimate.humidity = val;
-    //   console.log(this.inputClimate.humidity);
-    //   return val; // result
-    // });
 
     this.create(this.inputClimate).subscribe(
       (data) => {
