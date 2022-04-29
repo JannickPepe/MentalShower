@@ -18,8 +18,13 @@
     border-radius: 30px;    
 }
 
-.airquality ion-icon{
-    margin-top:2%;
+
+.AirLeftIcon {
+    
+}
+
+.AirRightIcon {
+    
 }
 
 .humidity ion-icon{
@@ -36,7 +41,10 @@
 
 /* AIR QUALITY On screens that are 600px wide or less, the */
 @media screen and (max-width: 600px) {
-    .airquality ion-icon{
+    .AirLeftIcon{
+        margin-top: 10px !important;
+    }
+    .AirRightIcon{
         margin-top: 10px !important;
     }
 }
@@ -45,7 +53,6 @@
         width: 13% !important;
     }
 }
-
 
 /* TEMP On screens that are 600px wide or less, the */
 @media screen and (max-width: 600px) {

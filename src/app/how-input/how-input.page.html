@@ -1,117 +1,130 @@
-<ion-grid>
+<ion-content class="ion-padding">
 
-  <ion-row>
-    <ion-col class="ion-text-center" size="12">
-      <h1>The mental shower room D3.05</h1>
-    </ion-col>
-    <ion-col class="ion-text-center" size="12">
-      <ion-item-divider></ion-item-divider>
-    </ion-col>
-  </ion-row>
-  <!-- Air Quality section-->
-  <ion-row>
-    <ion-col class="ion-text-center" size="12" size-sm>
-      <h2>How is the air quality?</h2>
-    </ion-col>
-  </ion-row>
-  <div class="airquality">
+  <ion-grid>
+
     <ion-row>
-      <ion-col class="ion-text-center" size="2">
-        <ion-icon size="large" name="sad-outline"></ion-icon>
+      <ion-col class="ion-text-center" size="12">
+        <h1>The mental shower room D3.05</h1>
       </ion-col>
-
-      <ion-col class="ion-text-center" size="8" >
-        <ion-button (click)="btnClicked('1')">1</ion-button>
-        <ion-button>2</ion-button>
-        <ion-button>3</ion-button>
-        <ion-button>4</ion-button>
-        <ion-button>5</ion-button>
-        <ion-button>6</ion-button>
-        <ion-item>
-          <ion-input [(ngModel)]="data.AirQuality" placeholder="Enter air quality level"></ion-input>
-        </ion-item>
-      </ion-col>
-
-      <ion-col class="ion-text-center" size="2">
-        <ion-icon size="large" name="happy-outline"></ion-icon>
-      </ion-col>
-      <ion-col class="ion-text-center" size="12"> <ion-text color="success">
-        {{levelbar}}</ion-text>
+      <ion-col class="ion-text-center" size="12">
+        <ion-item-divider></ion-item-divider>
       </ion-col>
     </ion-row>
-  </div>
-  <!-- Temperature section-->
-  <ion-row>
-    <ion-col class="ion-text-center" size="12" size-sm>
-      <h2>How is the temperature?</h2>
-    </ion-col>
-  </ion-row>
-  <div class="temp">
+    <!-- Air Quality section-->
     <ion-row>
-      <ion-col class="ion-text-center" size="2">
-        <ion-icon size="large" name="snow-outline"></ion-icon>
-      </ion-col>
-
-      <ion-col class="ion-text-center" size="8">
-        <ion-button>1</ion-button>
-        <ion-button>2</ion-button>
-        <ion-button>3</ion-button>
-        <ion-button>4</ion-button>
-        <ion-button (click)="btnClicked2('5')">5</ion-button>
-        <ion-button>6</ion-button>
-        <ion-item>
-          <ion-input [(ngModel)]="data.Temperature" placeholder="Enter temperature level"></ion-input>
-        </ion-item>
-      </ion-col>
-
-      <ion-col class="ion-text-center" size="2">
-        <ion-icon size="large" name="sunny-outline"></ion-icon>
-      </ion-col>
-      <ion-col class="ion-text-center" size="12"> <ion-text color="success">
-        {{levelbar2}}</ion-text>
+      <ion-col class="ion-text-center" size="12" size-sm>
+        <h2>How is the air quality?</h2>
       </ion-col>
     </ion-row>
-  </div>
-  <!-- Humidity section-->
-  <ion-row>
-    <ion-col class="ion-text-center" size="12" size-sm>
-      <h2>How is the humidity?</h2>
-    </ion-col>
-  </ion-row>
-  <div class="humidity">
+    <div class="airquality">
+      <ion-row>
+        <ion-col class="ion-text-center" size="2">
+          <div class="AirLeftIcon" size="large">
+            <img src="../../assets/icon/akar-icons_air.png">
+          </div>
+        </ion-col>
+  
+        <ion-col class="ion-text-center" size="8" >
+          <ion-button (click)="btnClicked('1')">1</ion-button>
+          <ion-button>2</ion-button>
+          <ion-button>3</ion-button>
+          <ion-button>4</ion-button>
+          <ion-button>5</ion-button>
+          <ion-button>6</ion-button>
+          <ion-item>
+            <ion-input [(ngModel)]="data.AirQuality" placeholder="Enter air quality level"></ion-input>
+          </ion-item>
+        </ion-col>
+  
+        <ion-col class="ion-text-center" size="2">
+          <div class="AirRightIcon" size="large">
+            <img src="../../assets/icon/ph_thermometer-hot.png">
+          </div>
+        </ion-col>
+        <ion-col class="ion-text-center" size="12"> <ion-text color="success">
+          {{levelbar}}</ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- Temperature section-->
     <ion-row>
-      <ion-col class="ion-text-center" size="2">
-        <ion-icon size="large" name="thermometer-outline"></ion-icon>
-      </ion-col>
-
-      <ion-col class="ion-text-center" size="8">
-        <ion-button>1</ion-button>
-        <ion-button>2</ion-button>
-        <ion-button>3</ion-button>
-        <ion-button (click)="btnClicked3('4')">4</ion-button>
-        <ion-button>5</ion-button>
-        <ion-button>6</ion-button>
-        <ion-item>
-          <ion-input [(ngModel)]="data.Humidity" placeholder="Enter humidity level"></ion-input>
-        </ion-item>
-      </ion-col>
-
-      <ion-col class="ion-text-center" size="2">
-        <ion-icon size="large" name="flame-outline"></ion-icon>
-      </ion-col>
-      <ion-col class="ion-text-center" size="12"> <ion-text color="success">
-        {{levelbar3}}</ion-text>
+      <ion-col class="ion-text-center" size="12" size-sm>
+        <h2>How is the temperature?</h2>
       </ion-col>
     </ion-row>
-  </div>
-  <!-- Accept button section-->
-  <ion-row>
-    <ion-col size="12">
-      <ng-container>
-        <ion-list style="text-align:center">
-          <ion-button color="success" (click)="submitForm()">Accept</ion-button>
-        </ion-list>
-      </ng-container>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+    <div class="temp">
+      <ion-row>
+        <ion-col class="ion-text-center" size="2">
+          <ion-icon size="large" name="snow-outline"></ion-icon>
+        </ion-col>
+  
+        <ion-col class="ion-text-center" size="8">
+          <ion-button>1</ion-button>
+          <ion-button>2</ion-button>
+          <ion-button>3</ion-button>
+          <ion-button>4</ion-button>
+          <ion-button (click)="btnClicked2('5')">5</ion-button>
+          <ion-button>6</ion-button>
+          <ion-item>
+            <ion-input [(ngModel)]="data.Temperature" placeholder="Enter temperature level"></ion-input>
+          </ion-item>
+        </ion-col>
+  
+        <ion-col class="ion-text-center" size="2">
+          <ion-icon size="large" name="sunny-outline"></ion-icon>
+        </ion-col>
+        <ion-col class="ion-text-center" size="12"> <ion-text color="success">
+          {{levelbar2}}</ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- Humidity section-->
+    <ion-row>
+      <ion-col class="ion-text-center" size="12" size-sm>
+        <h2>How is the humidity?</h2>
+      </ion-col>
+    </ion-row>
+    <div class="humidity">
+      <ion-row>
+        <ion-col class="ion-text-center" size="2">
+          <div class="humiLEfttIcon" size="large">
+            <img src="../../assets/icon/img_527445.png">
+          </div>
+        </ion-col>
+  
+        <ion-col class="ion-text-center" size="8">
+          <ion-button>1</ion-button>
+          <ion-button>2</ion-button>
+          <ion-button>3</ion-button>
+          <ion-button (click)="btnClicked3('4')">4</ion-button>
+          <ion-button>5</ion-button>
+          <ion-button>6</ion-button>
+          <ion-item>
+            <ion-input [(ngModel)]="data.Humidity" placeholder="Enter humidity level"></ion-input>
+          </ion-item>
+        </ion-col>
+  
+        <ion-col class="ion-text-center" size="2">
+          <div class="humiRightIcon" size="large">
+            <img src="../../assets/icon/carbon_humidity.png">
+          </div>
+        </ion-col>
+        <ion-col class="ion-text-center" size="12"> <ion-text color="success">
+          {{levelbar3}}</ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- Accept button section-->
+    <ion-row>
+      <ion-col size="12">
+        <ng-container>
+          <ion-list style="text-align:center">
+            <ion-button color="success" (click)="submitForm()">Accept</ion-button>
+          </ion-list>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>
