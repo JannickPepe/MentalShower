@@ -31,8 +31,11 @@ export class HowInputPage implements OnInit {
 
   submitForm() {
     this.apiService.createItem(this.data).subscribe((response) => {
-      this.router.navigate(['condition-input']);
-    });
+      this.router.navigate(['overview']);
+    },
+      (error) => {
+        this.router.navigate(['overview']);
+      });
   }
 
 
