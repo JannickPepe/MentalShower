@@ -6,11 +6,57 @@
     
 }
 
+.AirLeftIcon {
+    width: 35px;
+    height: 35px;
+}
+
+.AirRightIcon {
+    width: 35px;
+    height: 35px;
+}
+
+.AirLeftIcon img{
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.AirRightIcon img{
+    margin-top: 7px;
+}
+
+
+/*---------------------------------------------------------*/
+
+
 .temp{
     background: rgba(255, 200, 4, 0.33);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
 }
+
+.tempLeftIcon{
+    width: 35px;
+    height: 35px;
+}
+
+.tempRightIcon{
+    width: 35px;
+    height: 35px;
+}
+
+.tempLeftIcon img{
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.tempRightIcon img{
+    margin-top: 7px;
+}
+
+
+/*---------------------------------------------------------*/
+
 
 .humidity{
     background: rgba(5, 255, 150, 0.33);
@@ -18,21 +64,23 @@
     border-radius: 30px;    
 }
 
-
-.AirLeftIcon {
-    
+.humiLeftIcon{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
 }
 
-.AirRightIcon {
-    
+.humiRightIcon{
+    width: 35px;
+    height: 35px;
 }
 
-.humidity ion-icon{
-    margin-top:2%;
+.humiLeftIcon img {
+    margin-top: 7px;
 }
 
-.temp ion-icon{
-    margin-top:2%;
+.humiRightIcon img {
+    margin-top: 7px;
 }
 
 
