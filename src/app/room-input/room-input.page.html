@@ -5,15 +5,22 @@
 
   <ion-content class="ion-padding">
     <ion-grid>
+      <h2 *ngIf="!room" class="ion-text-center">Please choose a room</h2>
       <ion-row>
-        <ion-col class="ion-text-center" size="12">
-          <h1>The mental shower room D3.05</h1>
+        <ion-col size="6"size-sm>
+          <ion-button style="--background:grey" expand="block" [color]="room === 'D3.05' ? 'success' : ''" (click)="selectRoom('D3.05')">D3.05</ion-button>
         </ion-col>
+        <ion-col size="6" size-sm>
+          <ion-button style="--background:grey" expand="block" [color]="room === 'D3.06' ? 'success' : ''" (click)="selectRoom('D3.06')">D3.06</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
         <ion-col class="ion-text-center" size="12">
           <ion-item-divider></ion-item-divider>
         </ion-col>
       </ion-row>
-      <!-- Air Quality section-->
+
+      <div *ngIf="room">
       <ion-row>
         <ion-col class="ion-text-center" size="12" size-sm>
           <h2>Please choose a zone</h2>
@@ -54,6 +61,7 @@
       <ion-row>
         <ion-col class="ion-text-center" size="12"> <ion-text color="danger">You have now choosed zone {{zoneno}}</ion-text>  </ion-col>
       </ion-row>
+      </div>
       <ion-row>
         <ion-col class="ion-text-center" size="12">Pick a gender </ion-col>
       </ion-row>
