@@ -14,11 +14,6 @@ export class HowInputPage implements OnInit {
 
   data: Inputs;
 
-  public levelbar: string;
-  public levelbar2: string;
-  public levelbar3: string;
-  public colorvar;
-
   constructor(
     public apiService: ApiService,
     public router: Router
@@ -36,17 +31,6 @@ export class HowInputPage implements OnInit {
       (error) => {
         this.router.navigate(['overview']);
       });
-  }
-
-
-  btnClicked(bar) {
-    this.levelbar = bar;
-  }
-  btnClicked2(bar) {
-    this.levelbar2 = bar;
-  }
-  btnClicked3(bar) {
-    this.levelbar3 = bar;
   }
 
 
