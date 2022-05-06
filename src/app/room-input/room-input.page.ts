@@ -11,6 +11,7 @@ import { setRoom } from '../state/room/room.actions';
 export class RoomInputPage implements OnInit {
   public zoneno: number;
   public colorvar;
+  public room: string;
 
   constructor(private readonly store: Store, private readonly router: Router) {}
 
@@ -32,8 +33,12 @@ export class RoomInputPage implements OnInit {
       'rgba(153, 210, 252, 0.6)';
   }
 
+  selectRoom(id: string) {
+    this.room = id;
+  }
+
   acceptClick() {
-    this.store.dispatch(setRoom({ roomName: 'D3.05', zoneId: this.zoneno }));
+    this.store.dispatch(setRoom({ roomName: this.room, zoneId: this.zoneno }));
     this.router.navigate(['how-input']);
   }
 }
