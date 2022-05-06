@@ -23,3 +23,13 @@ ion-grid {
   justify-content:center;
 }
 
+.gender-overlay {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .5);
+}

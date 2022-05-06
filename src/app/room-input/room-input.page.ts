@@ -9,36 +9,28 @@ import { setRoom } from '../state/room/room.actions';
   styleUrls: ['./room-input.page.scss'],
 })
 export class RoomInputPage implements OnInit {
-  public zoneno: number;
-  public colorvar;
-  public room: string;
+  public gender: string;
+  public roomName: string;
+  public zoneId: number;
 
   constructor(private readonly store: Store, private readonly router: Router) {}
 
   ngOnInit() {}
 
-  btnClicked(zone) {
-    this.zoneno = zone;
-  }
-  test() {
-    this.colorvar = document.getElementById('bgcolor').style.backgroundColor =
-      '#99D2FC';
-    this.colorvar = document.getElementById('bgcolor2').style.backgroundColor =
-      'rgba(153, 210, 252, 0.6)';
-  }
-  test1() {
-    this.colorvar = document.getElementById('bgcolor2').style.backgroundColor =
-      '#99D2FC';
-    this.colorvar = document.getElementById('bgcolor').style.backgroundColor =
-      'rgba(153, 210, 252, 0.6)';
+  setGender(gender: string) {
+    this.gender = gender;
   }
 
-  selectRoom(id: string) {
-    this.room = id;
+  setRoom(name: string) {
+    this.roomName = name;
   }
 
-  acceptClick() {
-    this.store.dispatch(setRoom({ roomName: this.room, zoneId: this.zoneno }));
-    this.router.navigate(['how-input']);
+  setZone(id: number) {
+    this.zoneId = id;
+  }
+
+  async acceptClick() {
+    this.store.dispatch(setRoom({ roomName: this.roomName, zoneId: this.zoneId }));
+    await this.router.navigate(['how-input']);
   }
 }
