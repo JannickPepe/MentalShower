@@ -1,13 +1,33 @@
 ion-grid {
-  max-width: 500px;
+    max-width: 500px;
 }
 
 .airquality{
-
     background: rgba(4, 225, 255, 0.33);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
+}
 
+.notification {
+    display: inline-block;
+}
+
+.notification .badgeLeft {
+    padding-top: 5px;
+    top: -18px;
+    left: -15px;
+    border-radius: 50%;
+    color: black;
+    font-weight: 900;
+}
+
+.notification .badgeRight {
+    padding-top: 5px;
+    top: -18px;
+    right: -15px;
+    border-radius: 50%;
+    color: black;
+    font-weight: 900;
 }
 
 .AirLeftIcon {
