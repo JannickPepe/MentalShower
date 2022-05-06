@@ -1,3 +1,7 @@
+ion-grid {
+  max-width: 500px;
+}
+
 /*AIR STARTS*/
 .airquality {
   padding: 6px;
