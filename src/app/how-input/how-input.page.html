@@ -66,11 +66,18 @@
         </ion-row>
       </div>
       <!-- Temperature section-->
-      <ion-row>
+      <ion-row *ngIf="!airId">
+        <ion-col class="ion-text-center" size="12" size-sm>
+          <h4 style="color:black; border-radius: 30px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); background-color: rgba(255, 200, 4, 0.33); padding: 7px;">Please make air quality input!</h4>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row *ngIf="airId">
         <ion-col class="ion-text-center" size="12" size-sm>
           <h2>How is the temperature?</h2>
         </ion-col>
       </ion-row>
+
       <div class="temp">
         <ion-row *ngIf="airId">
           <ion-col class="ion-text-center" size="2">
@@ -116,11 +123,18 @@
         </ion-row>
       </div>
       <!-- Humidity section-->
-      <ion-row>
+      <ion-row *ngIf="!tempId">
         <ion-col class="ion-text-center" size="12" size-sm>
-          <h2>How is the humidity?</h2>
+          <h4 style="color:black; border-radius: 30px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); background-color: rgba(5, 255, 150, 0.33); padding: 7px;">Please make temperature input!</h4>
         </ion-col>
       </ion-row>
+      
+      <ion-row>
+        <ion-col class="ion-text-center" size="12" size-sm>
+          <h2 *ngIf="tempId">How is the humidity?</h2>
+        </ion-col>
+      </ion-row>
+
       <div class="humidity">
         <ion-row *ngIf="tempId">
           <ion-col class="ion-text-center" size="2">
