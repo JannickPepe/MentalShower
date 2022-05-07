@@ -11,6 +11,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./how-input.page.css'],
 })
 export class HowInputPage implements OnInit {
+  public airquality: number;
+  public temperature: number;
+  public humidity: number;
+  public airId: number;
+  public tempId: number;
+  public humiId: number;
 
   data: Inputs;
 
@@ -22,6 +28,30 @@ export class HowInputPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  setAirquality(id: number) {
+    this.airquality = id;
+  }
+
+  setTemperature(id: number) {
+    this.temperature = id;
+  }
+
+  setHumidity(id: number) {
+    this.humidity = id;
+  }
+
+  setLevelAir(id: number) {
+    this.airId = id;
+  }
+
+  setLevelTemp(id: number) {
+    this.tempId = id;
+  }
+
+  setLevelHumi(id: number) {
+    this.humiId = id;
   }
 
   submitForm() {
