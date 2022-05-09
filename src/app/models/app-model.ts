@@ -10,4 +10,5 @@ export interface OverviewItem {
   color: string;
   icon: string;
   value: number;
+  unit: string;
 }
