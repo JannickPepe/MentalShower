@@ -12,6 +12,7 @@ spec:
   tls:
   - hosts:
     - mentalshower.boti7.com
+    - mentalshower-api.boti7.com
     secretName: le-zealand-mentalshower
   rules:
   - host: mentalshower.boti7.com
@@ -20,6 +21,13 @@ spec:
       - path: /
         backend:
           serviceName: zealand-mentalshower
+          servicePort: 80
+  - host: mentalshower-api.boti7.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: zealand-mentalshower-api
           servicePort: 80
 ---
 apiVersion: v1
@@ -56,5 +64,51 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: zealand-mentalshower-api
+  namespace: apps
+spec:
+  selector:
+    app: zealand-mentalshower-api
+  ports:
+  - port: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zealand-mentalshower-api
+  namespace: apps
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: zealand-mentalshower-api
+  template:
+    metadata:
+      labels:
+        app: zealand-mentalshower-api
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: zealand-mentalshower-api
+        image: registry.boti7.com/apps/zealand-mentalshower-api
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: DB_HOST
+          value: mentalshower.mysql.database.azure.com
+        - name: DATABASE
+          value: mentalshower
+        - name: DB_USER
+          value: mentalshower
+        - name: DB_PASSWORD 
+          value: QS9VALUdRnPCMs4p
       imagePullSecrets:
       - name: regcred
