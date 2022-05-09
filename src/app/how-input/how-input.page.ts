@@ -55,12 +55,14 @@ export class HowInputPage implements OnInit {
   }
 
   submitForm() {
+    this.router.navigate(['overview']);
+    /* // The old API node server
     this.apiService.createItem(this.data).subscribe((response) => {
       this.router.navigate(['overview']);
     },
       (error) => {
         this.router.navigate(['overview']);
-      });
+      });*/
   }
 
 
