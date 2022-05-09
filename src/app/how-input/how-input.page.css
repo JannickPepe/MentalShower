@@ -8,11 +8,6 @@ ion-grid {
     border-radius: 30px;
 }
 
-:host(.button-solid.ion-color) .button-native {
-    background: var(rgba(4, 225, 255, 0.33));
-    color: var(--ion-color-contrast);
-}
-
 .notification {
     display: inline-block;
 }
