@@ -17,7 +17,7 @@
       <ion-row *ngFor="let item of measuredValues; index as i">
         <ion-col>
           <h2>{{ item.name }}</h2>
-          <div class="overview-card" [style]="{ 'background-color': item.color }">
+          <div class="overview-card" [style]="{ 'background-color': item.color + '21' }">
             <div class="icon" [innerHTML]="icons[i]"></div>
             <span class="value-text">It is {{ item.value }}{{ item.unit }}</span>
             <span class="more-button">More</span>
