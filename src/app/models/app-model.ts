@@ -12,3 +12,12 @@ export interface OverviewItem {
   value: number;
   unit: string;
 }
+
+export interface QuestionItem {
+  name: string;
+  title: string;
+  question: string;
+  color: string;
+  iconLeft: string;
+  iconRight: string;
+}
