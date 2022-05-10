@@ -1,57 +1,38 @@
-/*AIR STARTS*/
-.airquality {
+/* COLORS
+airquality: rgba(4, 225, 255, 0.33)
+temp: rgba(255, 200, 4, 0.33)
+humidity: rgba(5, 255, 150, 0.33)
+*/
+
+ion-grid {
+  max-width: 500px;
+}
+
+.overview-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 6px;
-  background: rgba(4, 225, 255, 0.33);
   border-radius: 25px;
 }
 
-.airquality ion-label p{
-  margin-top: 40px;
+.overview-card .icon {
+  width: 65px;
+  margin: 4px 4px;
+}
+
+.overview-card .value-text {
   font-weight: bold;
 }
 
-.airquality ion-label h2{
-  margin-top: 20px;
+.overview-card .more-button {
+  width: 65px;
+  margin: 40px 10px 0 0;
+  text-align: right;
+  font-size: 14px;
   font-weight: bold;
+  color: #a0a0a0;
 }
-
-/*TEMP STARTS*/
-
-.temp {
-  padding: 6px;
-  background: rgba(255, 200, 4, 0.33);
-  border-radius: 25px;
-}
-
-.temp ion-label p{
-  margin-top: 40px;
-  font-weight: bold;
-}
-
-.temp ion-label h2{
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-/*HUMIDITY STARTS*/
-
-.humidity {
-  padding: 6px;
-  background: rgba(5, 255, 150, 0.33);
-  border-radius: 25px;
-}
-
-.humidity ion-label p{
-  margin-top: 40px;
-  font-weight: bold;
-}
-
-.humidity ion-label h2{
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-
 
 /* MORE TEXT, On screens that are 600px wide or less, the */
 @media screen and (max-width: 600px) {

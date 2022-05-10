@@ -1,10 +1,57 @@
+ion-grid {
+    max-width: 500px;
+}
+
 .airquality{
-    
     background: rgba(4, 225, 255, 0.33);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    
 }
+
+.notification {
+    display: inline-block;
+}
+
+.notification .badgeLeft {
+    padding-top: 5px;
+    top: -18px;
+    left: -15px;
+    border-radius: 50%;
+    color: black;
+    font-weight: 900;
+}
+
+.notification .badgeRight {
+    padding-top: 5px;
+    top: -18px;
+    right: -15px;
+    border-radius: 50%;
+    color: black;
+    font-weight: 900;
+}
+
+.AirLeftIcon {
+    width: 35px;
+    height: 35px;
+}
+
+.AirRightIcon {
+    width: 35px;
+    height: 35px;
+}
+
+.AirLeftIcon img{
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.AirRightIcon img{
+    margin-top: 7px;
+}
+
+
+/*---------------------------------------------------------*/
+
 
 .temp{
     background: rgba(255, 200, 4, 0.33);
@@ -12,22 +59,52 @@
     border-radius: 30px;
 }
 
+.tempLeftIcon{
+    width: 35px;
+    height: 35px;
+}
+
+.tempRightIcon{
+    width: 35px;
+    height: 35px;
+}
+
+.tempLeftIcon img{
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.tempRightIcon img{
+    margin-top: 7px;
+}
+
+
+/*---------------------------------------------------------*/
+
+
 .humidity{
     background: rgba(5, 255, 150, 0.33);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;    
+    border-radius: 30px;
 }
 
-.airquality ion-icon{
-    margin-top:2%;
+.humiLeftIcon{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
 }
 
-.humidity ion-icon{
-    margin-top:2%;
+.humiRightIcon{
+    width: 35px;
+    height: 35px;
 }
 
-.temp ion-icon{
-    margin-top:2%;
+.humiLeftIcon img {
+    margin-top: 7px;
+}
+
+.humiRightIcon img {
+    margin-top: 7px;
 }
 
 
@@ -36,7 +113,10 @@
 
 /* AIR QUALITY On screens that are 600px wide or less, the */
 @media screen and (max-width: 600px) {
-    .airquality ion-icon{
+    .AirLeftIcon{
+        margin-top: 10px !important;
+    }
+    .AirRightIcon{
         margin-top: 10px !important;
     }
 }
@@ -45,7 +125,6 @@
         width: 13% !important;
     }
 }
-
 
 /* TEMP On screens that are 600px wide or less, the */
 @media screen and (max-width: 600px) {

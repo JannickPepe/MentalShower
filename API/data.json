@@ -64,16 +64,34 @@
       "Date": "23-04-2022"
     },
     {
-      "AirQuality": "2",
-      "Temperature": "3",
-      "Humidity": "4",
-      "id": "0VjSj5X"
+      "AirQuality": "1",
+      "Temperature": "1",
+      "Humidity": "1",
+      "id": "36XOuFA",
+      "Zone": "11",
+      "Gender": "M",
+      "Date": "27-04-2022"
     },
     {
-      "AirQuality": "2",
-      "Temperature": "2",
-      "Humidity": "2",
-      "id": "CVmGP6K"
+      "id": "uq8VJO6"
+    },
+    {
+      "id": "Eeuwll2"
+    },
+    {
+      "id": "MxGbVvC"
+    },
+    {
+      "id": "Wi5yX9Q"
+    },
+    {
+      "id": "IXQTqNY"
+    },
+    {
+      "AirQuality": "1",
+      "Temperature": "1",
+      "Humidity": "1",
+      "id": "CVRpb8C"
     }
   ]
 }

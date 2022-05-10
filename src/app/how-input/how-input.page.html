@@ -7,7 +7,7 @@
     <ion-grid>
       <ion-row>
         <ion-col class="ion-text-center" size="12">
-          <h1>The mental shower room D3.05</h1>
+          <h1>Survey for Mental shower room D3.05</h1>
         </ion-col>
         <ion-col class="ion-text-center" size="12">
           <ion-item-divider></ion-item-divider>
@@ -20,93 +20,163 @@
         </ion-col>
       </ion-row>
       <div class="airquality">
-        <ion-row>
+        <ion-row *ngIf="!airquality">
           <ion-col class="ion-text-center" size="2">
-            <ion-icon size="large" name="sad-outline"></ion-icon>
+            <div class="AirLeftIcon" size="large">
+              <img src="../../assets/icon/akar-icons_air.png">
+            </div>
           </ion-col>
 
-          <ion-col class="ion-text-center" size="8" >
-            <ion-button (click)="btnClicked('1')">1</ion-button>
-            <ion-button>2</ion-button>
-            <ion-button>3</ion-button>
-            <ion-button>4</ion-button>
-            <ion-button>5</ion-button>
-            <ion-button>6</ion-button>
-            <ion-item>
-              <ion-input [(ngModel)]="data.AirQuality" placeholder="Enter air quality level"></ion-input>
-            </ion-item>
+          <ion-col *ngIf="!airquality" class="ion-text-center" size="8" >
+
+            <div class="notification">
+              <div class="badgeLeft">Fresh</div>
+              <ion-button [color]="airId === 1 ? 'success' : 'light'" (click)="setLevelAir(1)">1</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="airId === 2 ? 'success' : 'light'" (click)="setLevelAir(2)">2</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="airId === 3 ? 'success' : 'light'" (click)="setLevelAir(3)">3</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="airId === 4 ? 'success' : 'light'" (click)="setLevelAir(4)">4</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="airId === 5 ? 'success' : 'light'" (click)="setLevelAir(5)">5</ion-button>
+            </div>
+
+            <div class="notification">
+              <div class="badgeRight">Stuffy</div>
+              <ion-button [color]="airId === 6 ? 'success' : 'light'" (click)="setLevelAir(6)">6</ion-button>
+            </div>
+
           </ion-col>
 
           <ion-col class="ion-text-center" size="2">
-            <ion-icon size="large" name="happy-outline"></ion-icon>
+            <div class="AirRightIcon" size="large">
+              <img src="../../assets/icon/ph_thermometer-hot.png">
+            </div>
           </ion-col>
-          <ion-col class="ion-text-center" size="12"> <ion-text color="success">
-            {{levelbar}}</ion-text>
-          </ion-col>
+          
         </ion-row>
       </div>
       <!-- Temperature section-->
-      <ion-row>
+      <ion-row *ngIf="!airId">
+        <ion-col class="ion-text-center" size="12" size-sm>
+          <h4 style="color:black; border-radius: 30px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); background-color: rgba(255, 200, 4, 0.33); padding: 7px;">Please make air quality input!</h4>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row *ngIf="airId">
         <ion-col class="ion-text-center" size="12" size-sm>
           <h2>How is the temperature?</h2>
         </ion-col>
       </ion-row>
+
       <div class="temp">
-        <ion-row>
+        <ion-row *ngIf="airId">
           <ion-col class="ion-text-center" size="2">
-            <ion-icon size="large" name="snow-outline"></ion-icon>
+            <div class="tempLeftIcon" size="large">
+              <img src="../../assets/icon/ic_outline-severe-cold.png">
+            </div>
           </ion-col>
 
-          <ion-col class="ion-text-center" size="8">
-            <ion-button>1</ion-button>
-            <ion-button>2</ion-button>
-            <ion-button>3</ion-button>
-            <ion-button>4</ion-button>
-            <ion-button (click)="btnClicked2('5')">5</ion-button>
-            <ion-button>6</ion-button>
-            <ion-item>
-              <ion-input [(ngModel)]="data.Temperature" placeholder="Enter temperature level"></ion-input>
-            </ion-item>
+          <ion-col *ngIf="airId" class="ion-text-center" size="8">
+            <div class="notification">
+              <div class="badgeLeft">Cold</div>
+              <ion-button [color]="tempId === 1 ? 'success' : 'light'" (click)="setLevelTemp(1)">1</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="tempId === 2 ? 'success' : 'light'" (click)="setLevelTemp(2)">2</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="tempId === 3 ? 'success' : 'light'" (click)="setLevelTemp(3)">3</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="tempId === 4 ? 'success' : 'light'" (click)="setLevelTemp(4)">4</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="tempId === 5 ? 'success' : 'light'" (click)="setLevelTemp(5)">5</ion-button>
+            </div>
+
+            <div class="notification">
+              <div class="badgeRight">Hot</div>
+              <ion-button [color]="tempId === 6 ? 'success' : 'light'" (click)="setLevelTemp(6)">6</ion-button>
+            </div>
           </ion-col>
 
           <ion-col class="ion-text-center" size="2">
-            <ion-icon size="large" name="sunny-outline"></ion-icon>
+            <div class="tempRightIcon" size="large">
+              <img src="../../assets/icon/bx_sun.png">
+            </div>
           </ion-col>
-          <ion-col class="ion-text-center" size="12"> <ion-text color="success">
-            {{levelbar2}}</ion-text>
-          </ion-col>
+          
         </ion-row>
       </div>
       <!-- Humidity section-->
-      <ion-row>
+      <ion-row *ngIf="!tempId">
         <ion-col class="ion-text-center" size="12" size-sm>
-          <h2>How is the humidity?</h2>
+          <h4 style="color:black; border-radius: 30px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); background-color: rgba(5, 255, 150, 0.33); padding: 7px;">Please make temperature input!</h4>
         </ion-col>
       </ion-row>
+      
+      <ion-row>
+        <ion-col class="ion-text-center" size="12" size-sm>
+          <h2 *ngIf="tempId">How is the humidity?</h2>
+        </ion-col>
+      </ion-row>
+
       <div class="humidity">
-        <ion-row>
+        <ion-row *ngIf="tempId">
           <ion-col class="ion-text-center" size="2">
-            <ion-icon size="large" name="thermometer-outline"></ion-icon>
+            <div class="humiLeftIcon" size="large">
+              <img src="../../assets/icon/img_527445.png">
+            </div>
           </ion-col>
 
-          <ion-col class="ion-text-center" size="8">
-            <ion-button>1</ion-button>
-            <ion-button>2</ion-button>
-            <ion-button>3</ion-button>
-            <ion-button (click)="btnClicked3('4')">4</ion-button>
-            <ion-button>5</ion-button>
-            <ion-button>6</ion-button>
-            <ion-item>
-              <ion-input [(ngModel)]="data.Humidity" placeholder="Enter humidity level"></ion-input>
-            </ion-item>
+          <ion-col *ngIf="tempId" class="ion-text-center" size="8">
+            <div class="notification">
+              <div class="badgeLeft">Dry</div>
+              <ion-button [color]="humiId === 1 ? 'success' : 'light'" (click)="setLevelHumi(1)">1</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="humiId === 2 ? 'success' : 'light'" (click)="setLevelHumi(2)">2</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="humiId === 3 ? 'success' : 'light'" (click)="setLevelHumi(3)">3</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="humiId === 4 ? 'success' : 'light'" (click)="setLevelHumi(4)">4</ion-button>
+            </div>
+
+            <div class="notification">
+              <ion-button [color]="humiId === 5 ? 'success' : 'light'" (click)="setLevelHumi(5)">5</ion-button>
+            </div>
+
+            <div class="notification">
+              <div class="badgeRight">Moisty</div>
+              <ion-button [color]="humiId === 6 ? 'success' : 'light'" (click)="setLevelHumi(6)">6</ion-button>
+            </div>
           </ion-col>
 
           <ion-col class="ion-text-center" size="2">
-            <ion-icon size="large" name="flame-outline"></ion-icon>
+            <div class="humiRightIcon" size="large">
+              <img src="../../assets/icon/carbon_humidity.png">
+            </div>
           </ion-col>
-          <ion-col class="ion-text-center" size="12"> <ion-text color="success">
-            {{levelbar3}}</ion-text>
-          </ion-col>
+  
         </ion-row>
       </div>
       <!-- Accept button section-->
@@ -114,19 +184,13 @@
         <ion-col size="12">
           <ng-container>
             <ion-list style="text-align:center">
-              <ion-button color="success" (click)="submitForm()">Accept</ion-button>
+              <ion-button color="success" [disabled]="!humiId" (click)="submitForm()">Finish</ion-button>
             </ion-list>
           </ng-container>
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-content>
 
-  <ion-footer>
-    <ion-toolbar>
-      <ion-col size="12">
-        <h2 class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</h2>
-      </ion-col>
-    </ion-toolbar>
-  </ion-footer>
+
+  </ion-content>
 </ion-app>
