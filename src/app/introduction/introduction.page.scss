@@ -24,14 +24,14 @@
       }   
       
       &:not(:last-child) {
-        border-bottom: 2px solid rgba(5, 255, 150, 0.33);
+        border-bottom: 2px solid rgba(255, 200, 4, 0.33);
       }
   
       &:nth-child(odd) {
         align-items: flex-start;
         
         &:not(:first-child) {
-          border-left: 2px solid rgba(5, 255, 150, 0.33);
+          border-left: 2px solid rgba(255, 200, 4, 0.33);
         }
         
         .point-index {
@@ -44,7 +44,7 @@
         align-items: flex-end;
         
         &:not(:last-child) {
-          border-right: 2px solid rgba(5, 255, 150, 0.33);
+          border-right: 2px solid rgba(255, 200, 4, 0.33);
         }
         
         .point-index {
@@ -59,7 +59,7 @@
         width: 40px;
         height: 40px;
         background: rgba(4, 225, 255, 0.33);;
-        border: 2px solid rgba(5, 255, 150, 0.33);
+        border: 2px solid rgba(255, 200, 4, 0.33);
         border-radius: 50%;
         display: flex;
         align-items: center;
