@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PopoverController } from '@ionic/angular';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
