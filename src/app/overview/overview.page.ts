@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { OverviewItem } from '../models/app-model';
+import { PopoverController } from '@ionic/angular';
+import { AboutComponent } from '../components/about/about.component';
 
 @Component({
   selector: 'app-overview',
@@ -36,10 +38,22 @@ export class OverviewPage implements OnInit {
   ];
   public icons: SafeHtml[] = [];
 
-  constructor(private sanitizer: DomSanitizer) { }
-
+  constructor(private sanitizer: DomSanitizer, public popoverController: PopoverController) { }
+  async presentPopover() {
+    const popover = await this.popoverController.create({
+      component: AboutComponent,
+      cssClass: 'my-custom-class',
+    
+      translucent: true
+    });
+    await popover.present();
+  
+    const { role } = await popover.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
   ngOnInit() {
     this.icons = this.measuredValues.map(item => this.sanitizer.bypassSecurityTrustHtml(item.icon));
   }
+
 
 }

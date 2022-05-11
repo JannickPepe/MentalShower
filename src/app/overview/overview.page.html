@@ -20,11 +20,12 @@
           <div class="overview-card" [style]="{ 'background-color': item.color }">
             <div class="icon" [innerHTML]="icons[i]"></div>
             <span class="value-text">It is {{ item.value }}{{ item.unit }}</span>
-            <span class="more-button">More</span>
+            <span class="more-button"><ion-button expand="full" fill="clear" (click)="presentPopover()"><ion-label>More</ion-label></ion-button>
+            </span>
           </div>
         </ion-col>
       </ion-row>
-    </ion-grid>
+          </ion-grid>
   </ion-content>
   <ion-footer>
     <ion-toolbar>
