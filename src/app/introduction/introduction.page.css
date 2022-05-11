@@ -1,3 +1,10 @@
+.roadmap .point .point-index:hover{
+    background-color: rgba(5, 255, 150, 0.33);
+}
+
+
+
+
 @media screen and (max-width: 600px) {
     .roadmap{
         padding: 0% !important;
