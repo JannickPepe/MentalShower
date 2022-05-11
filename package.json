@@ -31,6 +31,7 @@
     "@mui/icons-material": "^5.5.1",
     "@ngrx/store": "^13.1.0",
     "rxjs": "~6.6.0",
+    "scriptjs": "^2.5.9",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },

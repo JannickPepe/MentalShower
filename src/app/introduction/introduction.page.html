@@ -1,0 +1,82 @@
+
+<ion-app>
+  
+  <ion-content class="ion-padding">
+  <ion-grid>
+    
+    <ion-row>
+      <ion-col class="ion-text-center" size="12">
+        
+        <div class ="container ion-text-center">
+            <img src="../../assets/icon/mental_logo.png">
+        </div>
+        <div class="color_change" >
+          <p style="margin-top: -2%; color: rgb(105,105,105); font-weight: light; letter-spacing: 2px;">"Where climate quality and students meets"</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-text-center" size="12">
+        <h4>To start the survey:</h4>
+      </ion-col>
+    </ion-row>
+
+    <!-- Accept button section-->
+    <ion-row>
+      <ion-col size="12">
+        <ng-container>
+          <ion-list style="text-align:center">
+            <ion-button href="room-input" color="success">Start</ion-button>
+          </ion-list>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+    <ion-item-divider></ion-item-divider>
+    <ion-row>
+        <ion-col style="padding-left:8%; padding-right:8%;" class="ion-text-center" size="12">
+          <h3>Information roadmap, with clickable sections</h3>
+          <div class="roadmap">
+            <div class="point">
+              <div class="point-index" (click)="openModal()">1</div>
+              <div class="point-label" (click)="openModal()"><h4>Introduction</h4></div>
+              <div class="point-text">
+                <!----- <p *ngIf="dataReturned">{{dataReturned}}</p> --->
+              </div>
+            </div>
+            <div class="point">
+              <div class="point-index" (click)="openModal2()">2</div>
+              <div class="point-label" (click)="openModal2()"><h4>Gender input</h4></div>
+              <div class="point-text"></div>
+            </div>
+            <div class="point">
+              <div class="point-index" (click)="openModal3()">3</div>
+              <div class="point-label" (click)="openModal3()"><h4>Room and zone inputs</h4></div>
+              <div class="point-text"></div>
+            </div>
+            <div class="point">
+              <div class="point-index" (click)="openModal4()">4</div>
+              <div class="point-label" (click)="openModal4()"><h4>Air, temp and humidty inputs</h4></div>
+              <div class="point-text"></div>
+            </div>
+            <div class="point">
+              <div class="point-index" (click)="openModal5()">5</div>
+              <div class="point-label" (click)="openModal5()"><h4>Finish with results</h4></div>
+              <div class="point-text"></div>
+            </div>
+            <div class="point">
+            </div>
+          </div>
+        </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+        <p class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</p>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-app>
