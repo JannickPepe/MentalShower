@@ -1,0 +1,9 @@
+@media screen and (max-width: 600px) {
+    .roadmap{
+        padding: 0% !important;
+    }
+    .color_change p{
+        margin-top: -7% !important;
+    }
+    
+}

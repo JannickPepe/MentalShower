@@ -73,25 +73,13 @@
       "Date": "27-04-2022"
     },
     {
-      "id": "uq8VJO6"
-    },
-    {
-      "id": "Eeuwll2"
-    },
-    {
-      "id": "MxGbVvC"
-    },
-    {
-      "id": "Wi5yX9Q"
-    },
-    {
-      "id": "IXQTqNY"
-    },
-    {
-      "AirQuality": "1",
-      "Temperature": "1",
-      "Humidity": "1",
-      "id": "CVRpb8C"
+      "Zone": "2",
+      "Temperature": "2",
+      "Humidity": "2",
+      "AirQuality": "2",
+      "Gender": "F",
+      "Date": "10-05-2022",
+      "id": "oF4M2hv"
     }
   ]
 }

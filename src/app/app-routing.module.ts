@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'room-input', pathMatch: 'full' },
+  { path: '', redirectTo: 'introduction', pathMatch: 'full' },
   {
     path: 'input-create',
     loadChildren: () => import('./input-create/input-create.module').then( m => m.InputCreatePageModule)
@@ -35,6 +35,15 @@ const routes: Routes = [
     path: 'overview',
     loadChildren: () => import('./overview/overview.module').then( m => m.OverviewPageModule)
   },
+  {
+    path: 'introduction',
+    loadChildren: () => import('./introduction/introduction.module').then( m => m.IntroductionPageModule)
+  },  {
+    path: 'intro-modal',
+    loadChildren: () => import('./intro-modal/intro-modal.module').then( m => m.IntroModalPageModule)
+  },
+
+
 ];
 
 @NgModule({

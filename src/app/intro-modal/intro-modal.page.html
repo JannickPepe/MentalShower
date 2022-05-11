@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Information:</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center size="12">
+        {{modalTitle}}
+        {{modalTitle2}}
+        {{modalTitle3}}
+        {{modalTitle4}}
+        {{modalTitle5}}
+      </ion-col>
+      <ion-col text-center size="12">
+        {{modalText}}
+        {{modalText2}}
+        {{modalText3}}
+        {{modalText4}}
+        {{modalText5}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="closeModal()">Close</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
