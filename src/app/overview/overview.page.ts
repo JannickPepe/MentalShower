@@ -55,4 +55,5 @@ export class OverviewPage implements OnInit {
     this.icons = this.measuredValues.map(item => this.sanitizer.bypassSecurityTrustHtml(item.icon));
   }
 
+
 }

@@ -1,0 +1,14 @@
+ion-grid {
+    max-width: 500px;
+  }
+
+  
+
+.aboutCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    border-radius: 25px;
+    background-color: rgba(4, 225, 255, 0.33);
+}
