@@ -36,6 +36,13 @@
     <ion-row>
         <ion-col style="padding-left:8%; padding-right:8%;" class="ion-text-center" size="12">
           <h3>Information roadmap</h3>
+          <div>
+            <span class="blink">Clickable sections</span>
+          </div>
+          <div class="zoom">
+            <ion-icon size="large" name="chevron-down-outline"></ion-icon>
+          </div>
+          
           <div class="roadmap">
             <div class="point">
               <div class="point-index" (click)="openModal()">1</div>
@@ -75,7 +82,10 @@
 
   <ion-footer>
     <ion-toolbar>
+      <div class="copyright">
         <p class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved <span style="padding-right:1%; float:right;" (click)="submitForm()">&#10162; Admin</span></p>
+      </div>
+       
     </ion-toolbar>
   </ion-footer>
 

@@ -1,10 +1,37 @@
-span{
-    color:blue;
-    cursor: pointer;
+
+.blink {
+    animation: blink 2s 3;
+    opacity: 0;
 }
 
-span:hover{
-    color: black;
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        color: blue;
+    }
+}
+
+.zoom{
+    transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+.copyright span{
+    color:black;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.copyright span:hover{
+    color:blue;
+    opacity: 1.0;
 }
 
 .roadmap .point .point-index:hover{
