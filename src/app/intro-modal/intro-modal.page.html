@@ -1,7 +1,18 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Information:</ion-title>
-  </ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-title>Information:</ion-title>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="danger" style="float: right;" (click)="closeModal()">Close</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-toolbar>
+
 </ion-header>
 
 <ion-content class="ion-padding">
@@ -9,25 +20,34 @@
   <ion-grid>
     <ion-row>
       <ion-col text-center size="12">
-        {{modalTitle}}
-        {{modalTitle2}}
-        {{modalTitle3}}
-        {{modalTitle4}}
-        {{modalTitle5}}
-      </ion-col>
-      <ion-col text-center size="12">
-        {{modalText}}
-        {{modalText2}}
-        {{modalText3}}
-        {{modalText4}}
-        {{modalText5}}
+        <ion-card-title>
+          {{modalTitle}}
+          {{modalTitle2}}
+          {{modalTitle3}}
+          {{modalTitle4}}
+          {{modalTitle5}}
+        </ion-card-title>
       </ion-col>
     </ion-row>
+
     <ion-row>
-      <ion-col text-center>
-        <ion-button (click)="closeModal()">Close</ion-button>
+      <ion-col text-center size="12">
+        <ion-card-header>
+          <ion-icon name="information-outline"></ion-icon>
+          {{modalText}}
+          {{modalText2}}
+          {{modalText3}}
+          {{modalText4}}
+          {{modalText5}}
+        </ion-card-header>
+        <ion-img [src]="modalImgIntro"></ion-img>
+        <ion-img class="genderimg" style="width:50%;" [src]="modalImgGender"></ion-img>
+        <ion-img [src]="modalImgRoom"></ion-img>
+        <ion-img class="inputimg" style="width:80%;" [src]="modalImgInputs"></ion-img>
       </ion-col>
     </ion-row>
+
+    
   </ion-grid>
 
 </ion-content>

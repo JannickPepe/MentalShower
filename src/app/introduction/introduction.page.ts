@@ -3,6 +3,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { IntroModalPage } from '../intro-modal/intro-modal.page';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,11 +17,12 @@ export class IntroductionPage implements OnInit {
   dataReturned: any;
 
   constructor(
+    public router: Router,
     public modalController: ModalController,
     public modalController2: ModalController,
     public modalController3: ModalController,
     public modalController4: ModalController,
-    public modalController5: ModalController
+    public modalController5: ModalController,
   ) { }
 
   async openModal() {
@@ -28,8 +30,9 @@ export class IntroductionPage implements OnInit {
       component: IntroModalPage,
       componentProps: {
         'paramID': '1',
-        'paramTitle': 'On the introduction page you can gain information about:',
-        'paramText': 'Gender, room with zones, user inputs with air qualith, temperature and humidity and for the last part - see results before finish option',
+        'paramTitle': 'On the introduction page, you can gain information about:',
+        'paramText': 'There is not only a start survey button, but also a 5 step roadmap, shown below',
+        'paramImgIntro': '../../assets/icon/intro.png',
       }
     });
 
@@ -48,8 +51,9 @@ export class IntroductionPage implements OnInit {
       component: IntroModalPage,
       componentProps: {
         'paramID': '2',
-        'paramTitle2': 'For the gender section, you would be able to choose:',
-        'paramText2': 'There will be 3 avatar symbols - male, female or neutral with the "?" mark.',
+        'paramTitle2': 'For the gender section:',
+        'paramText2': 'There will be 3 avatar symbols - male, female or other.',
+        'paramImgGender': '../../assets/icon/genderSection.png',
       }
     });
 
@@ -64,47 +68,49 @@ export class IntroductionPage implements OnInit {
   }
 
   async openModal3() {
-    const modal2 = await this.modalController2.create({
+    const modal3 = await this.modalController3.create({
       component: IntroModalPage,
       componentProps: {
         'paramID': '3',
-        'paramTitle3': 'For the room and zone section, you would be able to choose:',
-        'paramText3': 'Which kind of room you want with the given zones aftewards',
+        'paramTitle3': 'For the room and zone section:',
+        'paramText3': 'You can choose which room you are in, with the given zones aftewards',
+        'paramImgRoom': '../../assets/icon/roomMap.png',
       }
     });
 
-    modal2.onDidDismiss().then((dataReturned) => {
+    modal3.onDidDismiss().then((dataReturned) => {
       if (dataReturned !== null) {
         this.dataReturned = dataReturned.data;
         //alert('Modal Sent Data :'+ dataReturned);
       }
     });
 
-    return await modal2.present();
+    return await modal3.present();
   }
 
   async openModal4() {
-    const modal2 = await this.modalController2.create({
+    const modal4 = await this.modalController4.create({
       component: IntroModalPage,
       componentProps: {
         'paramID': '4',
-        'paramTitle4': 'For the user input section, you would be able to choose from level 1 to 6:',
-        'paramText4': 'Air quility with fresh to stuffy, temperature from cold to hot and humidity with dry to moisty',
+        'paramTitle4': 'For the user input section:',
+        'paramText4': 'You would be able to choose from level 1 to 6 in the 3 categories:',
+        'paramImgInputs': '../../assets/icon/input.png',
       }
     });
 
-    modal2.onDidDismiss().then((dataReturned) => {
+    modal4.onDidDismiss().then((dataReturned) => {
       if (dataReturned !== null) {
         this.dataReturned = dataReturned.data;
         //alert('Modal Sent Data :'+ dataReturned);
       }
     });
 
-    return await modal2.present();
+    return await modal4.present();
   }
 
   async openModal5() {
-    const modal2 = await this.modalController2.create({
+    const modal5 = await this.modalController5.create({
       component: IntroModalPage,
       componentProps: {
         'paramID': '5',
@@ -113,18 +119,21 @@ export class IntroductionPage implements OnInit {
       }
     });
 
-    modal2.onDidDismiss().then((dataReturned) => {
+    modal5.onDidDismiss().then((dataReturned) => {
       if (dataReturned !== null) {
         this.dataReturned = dataReturned.data;
         //alert('Modal Sent Data :'+ dataReturned);
       }
     });
 
-    return await modal2.present();
+    return await modal5.present();
   }
 
   ngOnInit() {
   }
 
+  submitForm() {
+    this.router.navigate(['login']);
+  }
 
 }

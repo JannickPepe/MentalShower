@@ -35,7 +35,7 @@
     <ion-item-divider></ion-item-divider>
     <ion-row>
         <ion-col style="padding-left:8%; padding-right:8%;" class="ion-text-center" size="12">
-          <h3>Information roadmap, with clickable sections</h3>
+          <h3>Information roadmap</h3>
           <div class="roadmap">
             <div class="point">
               <div class="point-index" (click)="openModal()">1</div>
@@ -64,7 +64,7 @@
               <div class="point-label" (click)="openModal5()"><h4>Finish with results</h4></div>
               <div class="point-text"></div>
             </div>
-            <div class="point">
+            <div class="point"><!---FOR AN END LINE-->
             </div>
           </div>
         </ion-col>
@@ -75,7 +75,7 @@
 
   <ion-footer>
     <ion-toolbar>
-        <p class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</p>
+        <p class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved <span style="padding-right:1%; float:right;" (click)="submitForm()">&#10162; Admin</span></p>
     </ion-toolbar>
   </ion-footer>
 

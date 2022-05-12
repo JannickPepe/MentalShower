@@ -1,8 +1,15 @@
+span{
+    color:blue;
+    cursor: pointer;
+}
+
+span:hover{
+    color: black;
+}
+
 .roadmap .point .point-index:hover{
     background-color: rgba(5, 255, 150, 0.33);
 }
-
-
 
 
 @media screen and (max-width: 600px) {

@@ -1,0 +1,15 @@
+
+ion-title{
+    margin-top: 3%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .inputimg{
+        width: 100% !important;
+    }
+    .genderimg{
+    width: 80% !important;
+    }
+    
+}
