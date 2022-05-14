@@ -9,6 +9,8 @@
         <ion-col class="ion-text-center" size="12">
           <h1>Survey for Mental shower room D3.05</h1>
         </ion-col>
+      </ion-row>
+      <ion-row>
         <ion-col class="ion-text-center" size="12">
           <ion-item-divider></ion-item-divider>
         </ion-col>
@@ -184,7 +186,8 @@
         <ion-col size="12">
           <ng-container>
             <ion-list style="text-align:center">
-              <ion-button color="success" [disabled]="!humiId" (click)="submitForm()">See results</ion-button>
+              <ion-button color="light" [disabled]="!humiId" (click)="submitForm2()">Just finish</ion-button>
+              <ion-button color="success" [disabled]="!humiId" (click)="submitForm()">For results</ion-button>
             </ion-list>
           </ng-container>
         </ion-col>

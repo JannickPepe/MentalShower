@@ -64,6 +64,9 @@ export class HowInputPage implements OnInit {
         this.router.navigate(['overview']);
       });*/
   }
+  submitForm2() {
+    this.router.navigate(['introduction']);
+  }
 
 
 }
