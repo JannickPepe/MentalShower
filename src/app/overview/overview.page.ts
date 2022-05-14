@@ -3,6 +3,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { OverviewItem } from '../models/app-model';
 import { PopoverController } from '@ionic/angular';
 import { AboutComponent } from '../components/about/about.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-overview',
@@ -38,21 +39,23 @@ export class OverviewPage implements OnInit {
   ];
   public icons: SafeHtml[] = [];
 
-  constructor(private sanitizer: DomSanitizer, public popoverController: PopoverController) { }
+  constructor(private sanitizer: DomSanitizer, public popoverController: PopoverController, public router: Router) { }
   async presentPopover() {
     const popover = await this.popoverController.create({
       component: AboutComponent,
       cssClass: 'my-custom-class',
-    
       translucent: true
     });
     await popover.present();
-  
     const { role } = await popover.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
   }
   ngOnInit() {
     this.icons = this.measuredValues.map(item => this.sanitizer.bypassSecurityTrustHtml(item.icon));
+  }
+
+  submitForm() {
+    this.router.navigate(['introduction']);
   }
 
 

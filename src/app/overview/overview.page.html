@@ -5,12 +5,22 @@
 
   <ion-content class="ion-padding">
     <ion-grid>
+
       <ion-row>
         <ion-col class="ion-text-center" size="12">
-          <h1>Welcome User</h1>
-        </ion-col>
-        <ion-col class="ion-text-center" size="12">
-          <ion-item-divider></ion-item-divider>
+          <h1>Finish up with results</h1>
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="../../assets/icon/mental_logo.png" alt="Paris">
+              </div>
+              <div class="flip-box-back">
+                <h3>Thank you user</h3>
+                <p>Your inputs can<br> be seeing below</p>
+                <ion-icon size="large" name="chevron-down-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
         </ion-col>
       </ion-row>
 
@@ -25,11 +35,19 @@
           </div>
         </ion-col>
       </ion-row>
-          </ion-grid>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-button style="float:right;" color="primary" (click)="submitForm()">End!</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-content>
+
   <ion-footer>
     <ion-toolbar>
         <p class="ion-text-center">Copyright &#xA9; 2022 Mental Shower. All rights Reserved</p>
     </ion-toolbar>
   </ion-footer>
+  
 </ion-app>

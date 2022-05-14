@@ -4,6 +4,50 @@ temp: rgba(255, 200, 4, 0.33)
 humidity: rgba(5, 255, 150, 0.33)
 */
 
+
+
+.flip-box {
+  background-color: transparent;
+  width: 230px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 50%;
+  padding-top:6%;
+}
+
+
 ion-grid {
   max-width: 500px;
 }
