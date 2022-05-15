@@ -29,7 +29,7 @@
         </ng-container>
       </ion-col>
     </ion-row>
-    <ion-item-divider></ion-item-divider>
+
     <ion-row>
         <ion-col style="padding-left:8%; padding-right:8%;" class="ion-text-center" size="12">
           <h3>Information roadmap</h3>
@@ -43,29 +43,30 @@
           <div class="roadmap">
             <div class="point">
               <div class="point-index" (click)="openModal()">1</div>
-              <div class="point-label" (click)="openModal()"><h4>Introduction</h4></div>
+              <div class="point-label" (click)="openModal()"><ion-icon name="add-outline" size="small"></ion-icon>
+                <h4 style="display:inline-block ;">Introduction</h4></div>
               <div class="point-text">
                 <!----- <p *ngIf="dataReturned">{{dataReturned}}</p> --->
               </div>
             </div>
             <div class="point">
               <div class="point-index" (click)="openModal2()">2</div>
-              <div class="point-label" (click)="openModal2()"><h4>Gender input</h4></div>
+              <div class="point-label" (click)="openModal2()"><ion-icon name="add-outline" size="small"></ion-icon><h4 style="display:inline-block ;">Gender</h4></div>
               <div class="point-text"></div>
             </div>
             <div class="point">
               <div class="point-index" (click)="openModal3()">3</div>
-              <div class="point-label" (click)="openModal3()"><h4>Room and zone inputs</h4></div>
+              <div class="point-label" (click)="openModal3()"><ion-icon name="add-outline" size="small"></ion-icon><h4 style="display:inline-block ;">Room and zone</h4></div>
               <div class="point-text"></div>
             </div>
             <div class="point">
               <div class="point-index" (click)="openModal4()">4</div>
-              <div class="point-label" (click)="openModal4()"><h4>Air, temp and humidty inputs</h4></div>
+              <div class="point-label" (click)="openModal4()"><ion-icon name="add-outline" size="small" style="display:inline-block ;"></ion-icon><h4 style="display:inline-block ;">Categories</h4></div>
               <div class="point-text"></div>
             </div>
             <div class="point">
               <div class="point-index" (click)="openModal5()">5</div>
-              <div class="point-label" (click)="openModal5()"><h4>Finish with results</h4></div>
+              <div class="point-label" (click)="openModal5()"><ion-icon name="add-outline" size="small"></ion-icon><h4 style="display:inline-block ;">Finish with results</h4></div>
               <div class="point-text"></div>
             </div>
             <div class="point"><!---FOR AN END LINE-->
