@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-inferrable-types */
 import { Component, OnInit } from '@angular/core';
-import { Inputs } from '../models/inputs';
-import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
 
 
@@ -18,14 +16,11 @@ export class HowInputPage implements OnInit {
   public tempId: number;
   public humiId: number;
 
-  data: Inputs;
+
 
   constructor(
-    public apiService: ApiService,
     public router: Router
-  ) {
-    this.data = new Inputs();
-  }
+  ) {}
 
   ngOnInit() {
   }
